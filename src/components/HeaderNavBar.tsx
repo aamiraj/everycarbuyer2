@@ -8,7 +8,7 @@ import Menu from "./Menu";
 export function HeaderNavBar() {
   return (
     <nav className="w-full mx-auto px-6 py-10">
-      <div className="flex items-center justify-between text-blue-gray-900">
+      <div className="flex items-center justify-between">
         <Image
           src={Logo}
           alt="every car buyer logo"
