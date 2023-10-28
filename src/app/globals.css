@@ -31,6 +31,7 @@
 }
 
 .markerBG {
+  padding: 1rem 2rem;
   background-image: url(../assets//marker.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -44,6 +45,8 @@
 }
 
 .guideCardShadow {
+  border-radius: 10px;
+  padding: 16px;
   box-shadow: 0 20px 50px 0 rgba(189, 221, 248, 0.5);
 }
 

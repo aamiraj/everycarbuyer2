@@ -22,12 +22,12 @@ const GuideCard = ({ id, img, title, desc }: GuideType) => {
           className="object-contain"
         />
       </div>
-      <div>
+      <div className="my-8">
         <div className="flex">
           <p className="outlinedNumber">{id}</p>
           <p
             style={{ fontSize: "24px" }}
-            className="mb-2 font-bromega text-center"
+            className="mb-2 font-bold font-bromega text-center"
           >
             {title}
           </p>

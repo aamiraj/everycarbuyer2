@@ -9,9 +9,9 @@ type HeadingType = {
 const Heading = ({ content, marked, rest="" }: HeadingType) => {
   return (
     <div className="m-2 p-6">
-      <p className="font-bold text-3xl text-center font-bromega">
+      <p className="font-bold text-4xl text-center font-bromega">
         {content}
-        <span className="px-4 py-8 text-3xl text-center font-bromega markerBG">
+        <span className="px-4 py-8 text-4xl text-center font-bromega markerBG">
           {marked}
         </span>
         {rest}
