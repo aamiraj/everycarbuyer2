@@ -28,7 +28,7 @@ const FooterSection = () => {
             buyer
           </Link>
           <p
-            style={{ width: "300px", color: "#727272" }}
+            style={{ width: "250px", color: "#727272" }}
             className="font-poppins text-base"
           >
             This Bucheen is so cool, I found the partner I wanted. and it&apos;s very
@@ -45,8 +45,9 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
+                borderRadius: "50%"
               }}
-              className="flex items-center justify-center rounded-full"
+              className="flex items-center justify-center"
             >
               <FaInstagram
                 style={{ fontSize: "16px" }}
@@ -60,8 +61,9 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
+                borderRadius: "50%"
               }}
-              className="flex items-center justify-center rounded-full"
+              className="flex items-center justify-center"
             >
               <FaFacebook style={{ fontSize: "16px" }} className="text-white" />
             </Link>
@@ -72,8 +74,9 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
+                borderRadius: "50%"
               }}
-              className="flex items-center justify-center rounded-full"
+              className="flex items-center justify-center"
             >
               <FaTwitter style={{ fontSize: "16px" }} className="text-white" />
             </Link>
@@ -84,8 +87,9 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
+                borderRadius: "50%"
               }}
-              className="flex items-center justify-center rounded-full"
+              className="flex items-center justify-center"
             >
               <FaInstagram
                 style={{ fontSize: "16px" }}
@@ -109,7 +113,7 @@ const FooterSection = () => {
           </ul>
         </div>
         <div>
-          <Link href={"#"} className="block font-bold text-lg my-4">Subscribe</Link>
+          <Link style={{display: "block", margin: "16px 0"}} href={"#"} className="font-bold text-lg">Subscribe</Link>
           <p>Don&apos;t miss our future updates! Get Subscribed now!</p>
         </div>
         <div>

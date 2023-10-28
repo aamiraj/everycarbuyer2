@@ -42,12 +42,12 @@ const OfferSection = () => {
       />
       <p
         style={{ padding: "16px 0" }}
-        className="font-bold text-3xl text-start font-bromega text-white"
+        className="font-bold text-4xl text-start font-bromega text-white"
       >
         Get your highest
         <span
           style={{ padding: "16px" }}
-          className="whiteMarkerBG font-bold text-3xl text-start font-bromega text-white"
+          className="whiteMarkerBG font-bold text-4xl text-start font-bromega text-white"
         >
           offer
         </span>
@@ -63,7 +63,7 @@ const OfferSection = () => {
         <button
           type="button"
           style={{ backgroundColor: "#2591FE" }}
-          className="flex flex-row justify-center items-center gap-2 text-white text-base w-full p-6 font-bromega"
+          className="flex flex-row justify-center items-center gap-2 text-white w-full p-6 font-bromega rounded-xl font-bold text-xl"
         >
           Get my car valuation
           <RightAngle />

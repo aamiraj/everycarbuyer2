@@ -8,15 +8,15 @@ const Testimonials = () => {
   return (
     <div className="testimonials">
       <p
-        style={{ padding: "72px" }}
-        className="font-bold text-3xl text-center font-bromega text-white"
+        style={{ fontSize: "36px", padding: "72px" }}
+        className="font-bold text-center font-bromega text-white"
       >
         Testimonials
       </p>
       <div className="testimonialCard">
         {testimonialData.map((testmonial, i) => (
           <TestimonialCard
-          key={i}
+            key={i}
             profileImg={testmonial.profileImg}
             name={testmonial.displayName}
             comment={testmonial.comment}

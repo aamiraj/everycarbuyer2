@@ -12,10 +12,10 @@ type TestimonialType = {
 
 const TestimonialCard = ({ profileImg, name, comment }: TestimonialType) => {
   return (
-    <div className="p-6">
+    <div className="p-6 bg-white rounded-xl">
       <div>
         <Comma />
-        <p style={{ fontSize: "18px" }} className="font-bromega">
+        <p style={{ fontSize: "18px" }} className="py-4 font-bromega">
           {comment}
         </p>
       </div>
