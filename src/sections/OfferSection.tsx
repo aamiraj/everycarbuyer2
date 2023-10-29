@@ -5,9 +5,9 @@ import InputFieldUK from "@/components/InputFieldUK";
 import InputFieldMileage from "@/components/InputFieldMileage";
 import Image from "next/image";
 import RandomBlob from "../assets/randomBlob.png";
-import Cloud1 from "../assets/cloud1.png";
-import Cloud2 from "../assets/cloud2.png";
-import Cloud3 from "../assets/cloud3.png";
+import Cloud1 from "../assets/cloud1.svg";
+import Cloud2 from "../assets/cloud2.svg";
+import Cloud3 from "../assets/cloud3.svg";
 
 const OfferSection = () => {
   return (
@@ -22,22 +22,19 @@ const OfferSection = () => {
       <Image
         src={Cloud1}
         alt="Cloud"
-        width={195}
-        height={126}
+        width={250}
         className="cloud1"
       />
       <Image
         src={Cloud2}
         alt="Cloud"
-        width={205}
-        height={151}
+        width={250}
         className="cloud2"
       />
       <Image
         src={Cloud3}
         alt="Cloud"
-        width={204}
-        height={134}
+        width={250}
         className="cloud3"
       />
       <p

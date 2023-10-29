@@ -14,7 +14,7 @@ const HeaderSection = () => {
       className="py-10 flex flex-col justify-center items-center radialgrad"
     >
       <h1
-        style={{ fontSize: "48px" }}
+        style={{ fontSize: "45px" }}
         className="text-white font-bold text-center font-bromega"
       >
         Your car, Your price
