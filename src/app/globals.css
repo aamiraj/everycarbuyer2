@@ -150,3 +150,39 @@
   grid-template-columns: repeat(5, auto);
   gap: 40px;
 }
+
+/* details page  */
+#detailsForm {
+  position: relative;
+  background-image: radial-gradient(circle at 85% 100%, #5cadffd9, #299cff);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 80px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: #fff;
+}
+
+.formGrid {
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 16px;
+}

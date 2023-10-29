@@ -10,28 +10,28 @@ import Testimonials from "@/sections/Testimonials";
 export default function Home() {
   return (
     <main className="max-width-1600">
-      <header>
+      <header id="navbar">
         <HeaderNavBar />
       </header>
-      <section>
+      <section id="header">
         <HeaderSection />
       </section>
-      <section>
+      <section id="guide">
         <GuideSection />
       </section>
-      <section>
+      <section id="reason">
         <ReasonSection />
       </section>
-      <section>
+      <section id="testimonial">
         <Testimonials />
       </section>
-      <section>
+      <section id="commitment">
         <CommitmentSection />
       </section>
-      <section>
+      <section id="offer">
         <OfferSection />
       </section>
-      <section>
+      <section id="footer">
         <FooterSection />
       </section>
     </main>
