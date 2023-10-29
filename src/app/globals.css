@@ -264,7 +264,7 @@
   gap: 10px;
   position: relative;
   padding: 8px;
-  border: 1px solid #2591FE;
+  border: 1px solid #2591fe;
   border-radius: 6px;
 }
 
@@ -289,20 +289,66 @@
   cursor: pointer;
 }
 
-.time{
+.time {
   position: relative;
   width: 84px;
   padding: 8px;
-  border: 1px solid #2591FE;
+  border: 1px solid #2591fe;
   border-radius: 6px;
 }
 
-.time select{
+.time select {
   -webkit-appearance: none;
 }
 
-.arrow{
+.arrow {
   position: absolute;
   top: 15px;
   right: 10px;
+}
+
+.carinfogrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 8px;
+}
+
+.carInfo {
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  background-color: #3097ff;
+  padding: 8px;
+  color: #fff;
+  margin: 16px 0;
+}
+
+.addtionalcarinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.addtionalcarinfo p {
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+}
+.addtionalcarinfo p:nth-child(2n + 1) {
+  background-image: radial-gradient(circle at 85% 100%, #5cadffd9, #299cff);
+}
+.addtionalcarinfo p:nth-child(2n) {
+  background-color: #0070d1;
+}
+
+.messageContainer {
+  width: 1124px;
+  padding: 16px;
+  margin: 40px auto;
+}
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

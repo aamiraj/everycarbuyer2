@@ -1,5 +1,7 @@
 import { HeaderNavBar } from "@/components/HeaderNavBar";
 import BigForm from "@/sections/BigForm";
+import ImportantMessage from "@/sections/ImportantMessage";
+import FooterSection from "@/sections/FooterSection";
 
 const page = () => {
   return (
@@ -21,8 +23,13 @@ const page = () => {
             ></path>
           </svg>
         </div>
-
         <BigForm />
+      </section>
+      <section id="importantMessage">
+        <ImportantMessage />
+      </section>
+      <section id="footer">
+        <FooterSection />
       </section>
     </main>
   );
