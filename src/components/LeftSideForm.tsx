@@ -8,6 +8,7 @@ import Location from "../assets/location.png";
 import Calender from "../assets/calender.svg";
 import DownArrow from "../assets/downarrow.svg";
 import RightAngle from "../components/RightAngle";
+import { useRouter } from 'next/navigation'
 
 const HOUR = [
   "00",
@@ -39,11 +40,16 @@ const HOUR = [
 const MINUTE = ["00", "10", "20", "30", "40", "50"];
 
 const LeftSideForm = () => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/submission");
+  };
   return (
     <div style={{ padding: "40px", borderRadius: "10px" }} className="bg-white">
       <h1
         style={{ fontSize: "28px", margin: "24px", color: "#2591FE" }}
-        className="font-bold"
+        className="font-bold font-sansation"
       >
         Your offer is guaranteed for 4 days
       </h1>
@@ -56,7 +62,7 @@ const LeftSideForm = () => {
           <input
             type="text"
             placeholder="Email address (So that we can keep you updated)"
-            className="w-full p-4 text-black font-bold rounded-r-md border border-[#2591FE] outline-none"
+            className="w-full p-4 text-black font-normal font-bromega rounded-r-md border border-[#2591FE] outline-none"
           />
         </div>
         {/* input group for call  */}
@@ -67,7 +73,7 @@ const LeftSideForm = () => {
           <input
             type="text"
             placeholder="Mobile (For our team to reach you)"
-            className="w-full p-4 text-black font-bold rounded-r-md border border-[#2591FE] outline-none"
+            className="w-full p-4 text-black font-normal font-bromega  rounded-r-md border border-[#2591FE] outline-none"
           />
         </div>
         {/* location input field  */}
@@ -78,7 +84,7 @@ const LeftSideForm = () => {
           <input
             type="text"
             placeholder="Postcode (Convenient collection)"
-            className="w-full p-4 text-black font-bold rounded-r-md border border-[#2591FE] outline-none"
+            className="w-full p-4 text-black font-normal font-bromega  rounded-r-md border border-[#2591FE] outline-none"
           />
         </div>
         {/* check time checkbox  */}
@@ -87,7 +93,7 @@ const LeftSideForm = () => {
           className="w-full flex justify-between items-center gap-4"
         >
           <div>
-            <label className="checkBoxContainer">
+            <label className="checkBoxContainer font-sansation">
               Anytime
               <input type="checkbox" />
               <span className="checkmark"></span>
@@ -97,7 +103,7 @@ const LeftSideForm = () => {
             {/* date picker input field  */}
             <span className="datepicker-toggle">
               <Image src={Calender} alt="Location" width={22} height={20} />
-              <label htmlFor="calender">Select Date</label>
+              <label htmlFor="calender" className="font-sansation">Select Date</label>
               <Image src={DownArrow} alt="Location" width={18} height={10} />
               <input id="calender" type="date" className="datepicker-input" />
             </span>
@@ -146,7 +152,7 @@ const LeftSideForm = () => {
           </div>
         </div>
         <div>
-          <label className="checkBoxContainer">
+          <label className="checkBoxContainer font-sansation">
             Please exclude me from any communications that involve updates,
             price adjustments, and seasonal promotions.
             <input type="checkbox" />
@@ -155,6 +161,7 @@ const LeftSideForm = () => {
         </div>
         <button
           type="button"
+          onClick={handleClick}
           style={{ backgroundColor: "#2591FE", borderRadius: "8px" }}
           className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-6 font-bromega"
         >

@@ -6,8 +6,14 @@ import TrustPilot from "../assets/trustpilot.png";
 import RightAngle from "../components/RightAngle";
 import InputFieldUK from "@/components/InputFieldUK";
 import InputFieldMileage from "@/components/InputFieldMileage";
+import { useRouter } from 'next/navigation'
 
 const HeaderSection = () => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/details");
+  };
   return (
     <div
       style={{ gap: "16px" }}
@@ -36,6 +42,7 @@ const HeaderSection = () => {
           type="button"
           style={{ backgroundColor: "#2591FE", borderRadius: "8px" }}
           className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-6 font-bromega"
+          onClick={handleClick}
         >
           Get my car valuation
           <RightAngle />

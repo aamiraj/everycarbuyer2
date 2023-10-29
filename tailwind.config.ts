@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         bromega: ["BROmega", "sans-serif"],
+        sansation: ["Sansation", "sans-serif"]
       },
     },
   },

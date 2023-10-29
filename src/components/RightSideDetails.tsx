@@ -2,7 +2,7 @@ import React from "react";
 
 const RightSideDetails = () => {
   return (
-    <div style={{ padding: "40px", borderRadius: "10px" }}>
+    <div style={{ padding: "40px", borderRadius: "10px" }} className="font-bromega">
       <h1
         style={{ fontSize: "28px", margin: "24px 0", color: "#fff" }}
         className="font-bold"
