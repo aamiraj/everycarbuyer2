@@ -7,7 +7,7 @@ import Menu from "./Menu";
 
 export function HeaderNavBar() {
   return (
-    <nav className="w-full mx-auto px-6 py-10">
+    <nav className="w-full max-w-1600 mx-auto headerNavbar">
       <div className="flex items-center justify-between">
         <Image
           src={Logo}

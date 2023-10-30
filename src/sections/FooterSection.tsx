@@ -10,7 +10,7 @@ const inter = Inter({
 
 const FooterSection = () => {
   return (
-    <footer className="w-full footerSection">
+    <footer className="footerSection">
       <div className="footerGrid">
         <div>
           <Link
@@ -131,7 +131,7 @@ const FooterSection = () => {
           </ul>
         </div>
       </div>
-      <div style={{ border: "1px solid #EAEEF3" }}></div>
+      <div style={{ border: "1px solid #EAEEF3", margin: "40px 0" }}></div>
       <div>
         <p
           style={{ padding: "40px" }}

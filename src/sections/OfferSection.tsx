@@ -52,7 +52,7 @@ const OfferSection = () => {
         yet the easy way
       </p>
       <div
-        style={{ padding: "2rem", width: "512px" }}
+        style={{ position: "relative", padding: "2rem", maxWidth: "512px", zIndex: 50}}
         className="w-[512px] p-8 flex flex-col gap-4 justify-center items-center spreadedBG"
       >
         <InputFieldUK />

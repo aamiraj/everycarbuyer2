@@ -1,0 +1,276 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .headerNavbar {
+    padding: 40px 8px;
+  }
+  .spreadedBG {
+    max-width: 512px;
+    width: 100%;
+  }
+
+  .guideGrid {
+    grid-template-columns: 100%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 100%;
+  }
+
+  .markedHeading {
+    padding: 1rem 2rem;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 75% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 70% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: column;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+
+  .randomBlob,
+  .cloud1,
+  .cloud2,
+  .cloud3 {
+    display: none;
+  }
+
+  .offerSection {
+    padding: 8px;
+  }
+
+  .footerSection {
+    padding: 40px 16px;
+  }
+  .footerGrid {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .headerNavbar {
+    padding: 40px 8px;
+  }
+
+  .guideGrid {
+    grid-template-columns: 100%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 100%;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 59% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 35% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: column;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+
+  .randomBlob,
+  .cloud1,
+  .cloud2,
+  .cloud3 {
+    display: none;
+  }
+
+  .offerSection {
+    padding: 8px;
+  }
+
+  .footerSection {
+    padding: 40px 16px;
+  }
+  .footerGrid {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .headerNavbar {
+    padding: 40px 8px;
+  }
+
+  .guideGrid {
+    grid-template-columns: 49% 49%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 49% 49%;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 59% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 35% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: column;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+
+  .randomBlob,
+  .cloud1,
+  .cloud2,
+  .cloud3 {
+    display: none;
+  }
+
+  .offerSection {
+    padding: 8px;
+  }
+
+  .footerSection {
+    padding: 40px 16px;
+  }
+  .footerGrid {
+    grid-template-columns: 49% 49%;
+    gap: 16px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .headerNavbar {
+    padding: 40px 8px;
+  }
+
+  .guideGrid {
+    grid-template-columns: 32% 32% 32%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 32% 32% 32%;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 59% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 35% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+
+  .randomBlob,
+  .cloud1,
+  .cloud2,
+  .cloud3 {
+    display: none;
+  }
+
+  .offerSection {
+    padding: 8px;
+  }
+
+  .footerSection {
+    padding: 40px 16px;
+  }
+  .footerGrid {
+    grid-template-columns: 49% 49%;
+    gap: 16px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

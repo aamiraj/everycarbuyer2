@@ -10,12 +10,8 @@ type ReasonType = {
 const ReasonCard = ({ title, desc }: ReasonType) => {
   return (
     <div className="reasonCardShadow">
-      <div>
-        <p className="mb-2 font-bromega font-bold text-2xl text-black">{title}</p>
-        <p className="font-bromega text-base text-black">
-          {desc}
-        </p>
-      </div>
+      <p className="mb-2 font-bromega font-bold text-2xl text-black">{title}</p>
+      <p className="font-bromega text-base text-black">{desc}</p>
     </div>
   );
 };

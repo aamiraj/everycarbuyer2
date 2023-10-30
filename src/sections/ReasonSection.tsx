@@ -7,10 +7,15 @@ import React from "react";
 
 const ReasonSection = () => {
   return (
-    <div style={{ backgroundColor: "#F9FCFF" }}>
-      <Heading content={"Why"} marked={"choose"} rest={"Everycarbuyer?"} />
+    <div className="reasonSection">
+      <Heading content="Why" marked="choose" rest="us?" />
       <p
-        style={{ width: 690, margin: "auto", fontSize: "16px" }}
+        style={{
+          maxWidth: 690,
+          margin: "auto",
+          fontSize: "16px",
+          padding: "8px",
+        }}
         className="font-bromega text-center"
       >
         Sit back and enjoy a stress-free selling process as we expertly navigate

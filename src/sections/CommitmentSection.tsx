@@ -4,7 +4,7 @@ import React from "react";
 
 const CommitmentSection = () => {
   return (
-    <div style={{ padding: "80px" }}>
+    <div style={{ padding: "80px 8px" }}>
       <div className="borderDesign">
         <div className="secondBorderDesign">
           <p

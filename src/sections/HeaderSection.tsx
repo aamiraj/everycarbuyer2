@@ -16,8 +16,8 @@ const HeaderSection = () => {
   };
   return (
     <div
-      style={{ gap: "16px" }}
-      className="py-10 flex flex-col justify-center items-center radialgrad"
+      style={{ gap: "16px", padding: "40px 8px" }}
+      className="flex flex-col justify-center items-center radialgrad"
     >
       <h1
         style={{ fontSize: "45px" }}
