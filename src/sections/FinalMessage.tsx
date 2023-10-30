@@ -16,7 +16,6 @@ const FinalMessage = () => {
           style={{
             fontSize: "18px",
             padding: "0",
-            width: "512px",
             margin: "auto",
           }}
           className="font-regular text-center font-bromega text-white"
