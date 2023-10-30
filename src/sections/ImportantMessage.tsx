@@ -6,7 +6,7 @@ const ImportantMessage = () => {
   return (
     <div className="messageContainer">
       <p
-        style={{ margin: "40px" }}
+        style={{ margin: "16px" }}
         className="text-center font-sansation text-base"
       >
         When you receive a valuation,you agree to every car buyer&apos;s terms

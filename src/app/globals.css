@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @font-face {
   font-family: "BROmega";
@@ -157,13 +157,11 @@
   position: absolute;
   top: 40%;
   right: 35%;
-
 }
 .cloud2 {
   position: absolute;
   top: 10%;
   right: 20%;
-
 }
 .cloud3 {
   position: absolute;
@@ -188,6 +186,7 @@
 #detailsForm {
   position: relative;
   background-image: radial-gradient(circle at 85% 100%, #5cadffd9, #299cff);
+  border: 0;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
@@ -362,6 +361,7 @@
   gap: 16px;
   align-items: flex-start;
 }
+
 .addtionalcarinfo p {
   color: #fff;
   font-size: 18px;
@@ -369,18 +369,21 @@
   padding: 8px;
   border-radius: 4px;
 }
+
 .addtionalcarinfo p:nth-child(2n + 1) {
   background-image: radial-gradient(circle at 85% 100%, #5cadffd9, #299cff);
 }
+
 .addtionalcarinfo p:nth-child(2n) {
   background-color: #0070d1;
 }
 
 .messageContainer {
-  width: 1124px;
+  width: 100%;
   padding: 16px;
   margin: 40px auto;
 }
+
 .imgContainer {
   display: flex;
   justify-content: center;

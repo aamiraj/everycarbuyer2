@@ -49,7 +49,7 @@ const LeftSideForm = () => {
     <div style={{ padding: "40px", borderRadius: "10px" }} className="bg-white">
       <h1
         style={{ fontSize: "28px", margin: "24px", color: "#2591FE" }}
-        className="font-bold font-sansation"
+        className="font-bold font-sansation text-center"
       >
         Your offer is guaranteed for 4 days
       </h1>
@@ -90,7 +90,7 @@ const LeftSideForm = () => {
         {/* check time checkbox  */}
         <div
           style={{ gap: "16px" }}
-          className="w-full flex justify-between items-center gap-4"
+          className="w-full flex flex-col flex-wrap lg:flex-row justify-between items-center gap-4"
         >
           <div>
             <label className="checkBoxContainer font-sansation">
