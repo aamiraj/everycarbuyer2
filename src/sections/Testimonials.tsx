@@ -8,7 +8,7 @@ const Testimonials = () => {
   return (
     <div className="testimonials">
       <p
-        style={{ fontSize: "36px", padding: "40px" }}
+        style={{ fontSize: "36px", padding: "80px 0" }}
         className="font-bold text-center font-bromega text-white"
       >
         Testimonials

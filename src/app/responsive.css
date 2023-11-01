@@ -53,16 +53,18 @@
   }
 
   .randomBlob,
-  .cloud1,
-  .cloud2,
-  .cloud3 {
+  .backcloud1,
+  .backcloud2,
+  .backcloud3 {
     display: none;
   }
 
   .offerSection {
     padding: 8px;
   }
-
+  .commitmentSection{
+    padding: 80px 8px;
+  }
   .footerSection {
     padding: 40px 16px;
   }
@@ -161,7 +163,9 @@
   .offerSection {
     padding: 8px;
   }
-
+  .commitmentSection{
+    padding: 80px 20px;
+  }
   .footerSection {
     padding: 40px 16px;
   }
@@ -243,15 +247,8 @@
     padding: 20px;
   }
 
-  .randomBlob,
-  .cloud1,
-  .cloud2,
-  .cloud3 {
-    display: none;
-  }
-
-  .offerSection {
-    padding: 8px;
+  .commitmentSection{
+    padding: 80px 54px;
   }
 
   .footerSection {
@@ -330,19 +327,12 @@
     padding: 20px;
   }
 
-  .randomBlob,
-  .cloud1,
-  .cloud2,
-  .cloud3 {
-    display: none;
-  }
-
-  .offerSection {
-    padding: 8px;
+  .commitmentSection{
+    padding: 80px 108px;
   }
 
   .footerSection {
-    padding: 40px 16px;
+    padding: 80px 16px;
   }
   .footerGrid {
     grid-template-columns: 49% 49%;

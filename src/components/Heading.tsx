@@ -10,7 +10,9 @@ type HeadingType = {
 
 const Heading = ({ content, marked, rest = "" }: HeadingType) => {
   return (
-      <h1 className="font-bold text-4xl text-center font-bromega">
+      <h1 style={{
+        margin: "40px 0"
+      }} className="font-bold text-4xl text-center font-bromega">
         <span>{content}</span>
         <span className="text-4xl text-center font-bromega markerBG">
           {marked}

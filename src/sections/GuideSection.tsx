@@ -5,7 +5,7 @@ import React from "react";
 
 const GuideSection = () => {
   return (
-    <div style={{ margin: "48px 0" }}>
+    <div style={{ margin: "80px 0" }}>
       <Heading content="How it" marked="works" rest="" />
       <div className="guideGrid">
         {cardData.map((data, i) => (

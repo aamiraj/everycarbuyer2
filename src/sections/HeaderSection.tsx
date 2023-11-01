@@ -49,6 +49,7 @@ const HeaderSection = () => {
         </button>
       </div>
       <Image
+      style={{ margin: "54px 0px" }}
         src={TrustPilot}
         alt="trustpilot logo"
         width={345}

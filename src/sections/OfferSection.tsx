@@ -5,9 +5,9 @@ import InputFieldUK from "@/components/InputFieldUK";
 import InputFieldMileage from "@/components/InputFieldMileage";
 import Image from "next/image";
 import RandomBlob from "../assets/randomBlob.png";
-import Cloud1 from "../assets/cloud1.svg";
-import Cloud2 from "../assets/cloud2.svg";
-import Cloud3 from "../assets/cloud3.svg";
+import Cloud1 from "../assets/frontcloud1.svg";
+import Cloud2 from "../assets/frontcloud2.svg";
+import Cloud3 from "../assets/frontcloud3.svg";
 
 const OfferSection = () => {
   return (
@@ -19,26 +19,16 @@ const OfferSection = () => {
         height={199}
         className="randomBlob"
       />
-      <Image
-        src={Cloud1}
-        alt="Cloud"
-        width={250}
-        className="cloud1"
-      />
-      <Image
-        src={Cloud2}
-        alt="Cloud"
-        width={250}
-        className="cloud2"
-      />
-      <Image
-        src={Cloud3}
-        alt="Cloud"
-        width={250}
-        className="cloud3"
-      />
-      <p
-        style={{ padding: "16px 0" }}
+      <div className="backcloud1">
+        <Image src={Cloud1} alt="Cloud" className="cloud1" />
+      </div>
+      <div className="backcloud2">
+        <Image src={Cloud2} alt="Cloud" className="cloud2" />
+      </div>
+      <div className="backcloud3">
+        <Image src={Cloud3} alt="Cloud" className="cloud3" />
+      </div>
+      <h1
         className="font-bold text-4xl text-start font-bromega text-white"
       >
         Get your highest
@@ -50,10 +40,15 @@ const OfferSection = () => {
         </span>
         <br />
         yet the easy way
-      </p>
+      </h1>
       <div
-        style={{ position: "relative", padding: "2rem", maxWidth: "512px", zIndex: 50}}
-        className="w-[512px] p-8 flex flex-col gap-4 justify-center items-center spreadedBG"
+        style={{
+          position: "relative",
+          padding: "2rem",
+          maxWidth: "512px",
+          zIndex: 50,
+        }}
+        className="flex flex-col justify-center items-center spreadedBG"
       >
         <InputFieldUK />
         <InputFieldMileage />
