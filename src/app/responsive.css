@@ -62,7 +62,7 @@
   .offerSection {
     padding: 8px;
   }
-  .commitmentSection{
+  .commitmentSection {
     padding: 80px 8px;
   }
   .footerSection {
@@ -99,7 +99,8 @@
     position: relative;
     top: -200px;
     left: 0;
-    padding: 240px 16px 16px 32px;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
   }
   .guideGrid2 {
     grid-template-columns: 100%;
@@ -163,7 +164,7 @@
   .offerSection {
     padding: 8px;
   }
-  .commitmentSection{
+  .commitmentSection {
     padding: 80px 20px;
   }
   .footerSection {
@@ -193,7 +194,8 @@
     position: relative;
     top: -200px;
     left: 0;
-    padding: 240px 16px 16px 32px;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
   }
   .guideGrid2 {
     grid-template-columns: 100%;
@@ -247,7 +249,7 @@
     padding: 20px;
   }
 
-  .commitmentSection{
+  .commitmentSection {
     padding: 80px 54px;
   }
 
@@ -272,7 +274,8 @@
     position: relative;
     top: -200px;
     left: 0;
-    padding: 240px 16px 16px 32px;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
   }
   .guideGrid2 {
     grid-template-columns: 49% 49%;
@@ -327,7 +330,7 @@
     padding: 20px;
   }
 
-  .commitmentSection{
+  .commitmentSection {
     padding: 80px 108px;
   }
 
@@ -352,7 +355,8 @@
     position: relative;
     top: -200px;
     left: 0;
-    padding: 240px 16px 16px 32px;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
   }
 }
 
