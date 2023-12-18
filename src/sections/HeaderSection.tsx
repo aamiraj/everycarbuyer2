@@ -15,7 +15,18 @@ const getDetails = async (reg: any) => {
     method: "POST",
     body: JSON.stringify({ reg }),
   });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
   const { data } = await res.json();
+
+  if (data.errors) {
+    alert(data.errors[0].detail);
+    return;
+  }
+
   return data;
 };
 
@@ -25,8 +36,10 @@ const HeaderSection = () => {
 
   const handleClick = async () => {
     const vehicleData = await getDetails(reg);
-    setDetails(vehicleData);
-    router.push("/details");
+    if (vehicleData !== undefined) {
+      setDetails(vehicleData);
+      router.push("/details");
+    }
   };
 
   return (
