@@ -6,12 +6,14 @@ export async function POST(request: NextRequest) {
   const url =
     "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles";
 
+  const headerConf: any = {
+    "Content-Type": "application/json",
+    "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
+  };
+
   const res = await fetch(url, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
-    },
+    headers: headerConf,
     body: JSON.stringify({
       registrationNumber: reg,
     }),
