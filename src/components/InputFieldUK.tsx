@@ -1,8 +1,13 @@
+"use client"
+
 import Image from "next/image";
 import React from "react";
 import UK from "../assets/united-kingdom.png"
+import { DataContext } from "@/contexts/dataContext";
 
 const InputFieldUK = () => {
+  const {reg, setReg}: any = React.useContext(DataContext)
+  
   return (
     <div className="w-full flex flex-row gap-0">
       <span className="bg-[#299CFF] p-2 flex flex-col gap-1 items-center rounded-l-md">
@@ -13,6 +18,8 @@ const InputFieldUK = () => {
         type="text"
         placeholder="Enter your Reg"
         className="w-full p-4 text-black font-bold rounded-r-md border border-[#2591FE] outline-none"
+        defaultValue={reg}
+        onChange={e => setReg(e.target.value)}
       />
     </div>
   );
