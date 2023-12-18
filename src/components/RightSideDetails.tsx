@@ -1,8 +1,16 @@
-import React from "react";
+"use client"
+
+import { DataContext } from "@/contexts/dataContext";
+import React, { useContext } from "react";
 
 const RightSideDetails = () => {
+  const { details }: any = useContext(DataContext);
+
   return (
-    <div style={{ padding: "40px", borderRadius: "10px" }} className="font-bromega">
+    <div
+      style={{ padding: "40px", borderRadius: "10px" }}
+      className="font-bromega"
+    >
       <h1
         style={{ fontSize: "28px", margin: "24px 0", color: "#fff" }}
         className="font-bold"
@@ -10,7 +18,9 @@ const RightSideDetails = () => {
         Your Details
       </h1>
       <div className="carinfogrid">
-        <p className="carInfo font-bold text-2xl">DK11SSX</p>
+        <p className="carInfo font-bold text-2xl">
+          {details?.registrationNumber}
+        </p>
         <p
           style={{ backgroundColor: "#0070D1" }}
           className="carInfo font-bold text-2xl"
@@ -19,14 +29,30 @@ const RightSideDetails = () => {
         </p>
       </div>
       <div className="addtionalcarinfo">
-        <p>Manufacturer: AUDI</p>
-        <p>Model: A3 SPORTBACK SPECIAL EDITIONS -</p>
-        <p>2.0 TDI 170 Quattro Black Edition 5dr</p>
-        <p>Year: 2011</p>
-        <p>Colour: White</p>
-        <p>Transmission: Manual</p>
-        <p>Engine Size: 2000</p>
-        <p>First Registered: 05/04/2011</p>
+        <p>
+          Manufacturer: <span>{details?.make}</span>
+        </p>
+        <p>
+          Wheel Plan: <span>{details?.wheelplan}</span>
+        </p>
+        <p>
+          Motor Expiry Data: <span>{details?.motExpiryDate}</span>
+        </p>
+        <p>
+          Year: <span>{details?.yearOfManufacture}</span>
+        </p>
+        <p>
+          Colour: <span>{details?.colour}</span>
+        </p>
+        <p>
+          Fuel Type: <span>{details?.fuelType}</span>
+        </p>
+        <p>
+          Engine Size: <span>{details?.engineCapacity}</span>
+        </p>
+        <p>
+          First Registered: <span>{details?.monthOfFirstRegistration}</span>
+        </p>
       </div>
     </div>
   );

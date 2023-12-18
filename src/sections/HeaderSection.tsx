@@ -10,27 +10,22 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { DataContext } from "@/contexts/dataContext";
 
+const getDetails = async (reg: any) => {
+  const res = await fetch("/api/vehicle", {
+    method: "POST",
+    body: JSON.stringify({ reg }),
+  });
+  const { data } = await res.json();
+  return data;
+};
+
 const HeaderSection = () => {
   const { reg, setDetails }: any = useContext(DataContext);
   const router = useRouter();
 
-  const handleClick = () => {
-    const url =
-      "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles";
-
-    axios
-      .post(
-        url,
-        { registrationNumber: reg },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
-          }
-        }
-      )
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+  const handleClick = async () => {
+    const vehicleData = await getDetails(reg);
+    setDetails(vehicleData);
     router.push("/details");
   };
 
