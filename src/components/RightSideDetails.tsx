@@ -1,10 +1,50 @@
-"use client"
+"use client";
 
-import { DataContext } from "@/contexts/dataContext";
-import React, { useContext } from "react";
+import { CarData, DataContext } from "@/contexts/dataContext";
+import React, { useContext, useState } from "react";
+import { FaRedo } from "react-icons/fa";
+import Modal from "./Modal";
+import Loading from "./Loading";
+import { useRouter } from "next/navigation";
+
+const getDetails = async (reg: any) => {
+  const res = await fetch("/api/vehicle", {
+    method: "POST",
+    body: JSON.stringify({ reg }),
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const { data } = await res.json();
+
+  return data;
+};
 
 const RightSideDetails = () => {
-  const { details }: any = useContext(DataContext);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const { carData, setCarData, details, setDetails }: any = useContext(DataContext);
+  const router = useRouter();
+
+  const handleClick = async () => {
+    setLoading(true);
+    const vehicleData = await getDetails(carData?.registration);
+    if (vehicleData?.errors) {
+      setIsOpen(true);
+      setMessage(vehicleData.errors[0].detail);
+      setDetails({})
+      setLoading(false);
+      return;
+    }
+    if (vehicleData !== undefined) {
+      setDetails(vehicleData);
+      router.push("/details");
+      setLoading(false);
+    }
+  };
 
   return (
     <div
@@ -13,30 +53,51 @@ const RightSideDetails = () => {
     >
       <h1
         style={{ fontSize: "28px", margin: "24px 0", color: "#fff" }}
-        className="font-bold"
+        className="font-bold flex justify-between"
       >
-        Your Details
+        Your Details{" "}
+        <span onClick={handleClick} className="redoButton" title="Submit Again">
+          <FaRedo />
+        </span>
       </h1>
       <div className="carinfogrid">
-        <p className="carInfo font-bold text-2xl">
-          {details?.registrationNumber}
-        </p>
-        <p
-          style={{ backgroundColor: "#0070D1" }}
+        <input
+          type="text"
+          id="registration"
           className="carInfo font-bold text-2xl"
-        >
-          80000
-        </p>
+          defaultValue={details?.registrationNumber}
+          style={{ outline: "none" }}
+          onChange={(event) =>
+            setCarData((c: CarData) => ({
+              ...c,
+              registration: event.target.value,
+            }))
+          }
+        />
+
+        <input
+          type="text"
+          id="mileage"
+          style={{ backgroundColor: "#0070D1", outline: "none" }}
+          className="carInfo font-bold text-2xl"
+          defaultValue={carData?.mileage}
+          onChange={(event) =>
+            setCarData((c: CarData) => ({
+              ...c,
+              mileage: event.target.value,
+            }))
+          }
+        />
       </div>
       <div className="addtionalcarinfo">
         <p>
           Manufacturer: <span>{details?.make}</span>
         </p>
         <p>
-          Wheel Plan: <span>{details?.wheelplan}</span>
+          Model: <span>{details?.wheelplan}</span>
         </p>
         <p>
-          Motor Expiry Data: <span>{details?.motExpiryDate}</span>
+          MOT Expiry Data: <span>{details?.motExpiryDate}</span>
         </p>
         <p>
           Year: <span>{details?.yearOfManufacture}</span>
@@ -54,6 +115,8 @@ const RightSideDetails = () => {
           First Registered: <span>{details?.monthOfFirstRegistration}</span>
         </p>
       </div>
+      {isOpen && <Modal registration={carData?.registration} message={message} setIsOpen={setIsOpen} />}
+      {isLoading && <Loading />}
     </div>
   );
 };

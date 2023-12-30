@@ -163,7 +163,7 @@ const LeftSideForm = () => {
           type="button"
           onClick={handleClick}
           style={{ backgroundColor: "#2591FE", borderRadius: "8px" }}
-          className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-6 font-bromega"
+          className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-4 font-bromega"
         >
           Get my car valuation
           <RightAngle />

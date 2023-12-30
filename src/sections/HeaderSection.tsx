@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import TrustPilot from "../assets/trustpilot.png";
 import RightAngle from "../components/RightAngle";
 import InputFieldUK from "@/components/InputFieldUK";
 import InputFieldMileage from "@/components/InputFieldMileage";
 import { useRouter } from "next/navigation";
-import axios from "axios";
 import { DataContext } from "@/contexts/dataContext";
+import Modal from "@/components/Modal";
+import Loading from "@/components/Loading";
 
 const getDetails = async (reg: any) => {
   const res = await fetch("/api/vehicle", {
@@ -22,23 +23,33 @@ const getDetails = async (reg: any) => {
 
   const { data } = await res.json();
 
-  if (data.errors) {
-    alert(data.errors[0].detail);
-    return;
-  }
-
   return data;
 };
 
 const HeaderSection = () => {
-  const { reg, setDetails }: any = useContext(DataContext);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const {
+    carData: { registration },
+    setDetails,
+  }: any = useContext(DataContext);
   const router = useRouter();
 
   const handleClick = async () => {
-    const vehicleData = await getDetails(reg);
+    setLoading(true)
+    const vehicleData = await getDetails(registration);
+    if (vehicleData?.errors) {
+      setIsOpen(true)
+      setMessage(vehicleData.errors[0].detail)
+      setDetails({})
+      setLoading(false)
+      return;
+    }
     if (vehicleData !== undefined) {
       setDetails(vehicleData);
       router.push("/details");
+      setLoading(false)
     }
   };
 
@@ -48,7 +59,7 @@ const HeaderSection = () => {
       className="flex flex-col justify-center items-center radialgrad"
     >
       <h1
-        style={{ fontSize: "45px" }}
+        style={{ fontSize: "40px" }}
         className="text-white font-bold text-center font-bromega"
       >
         Your car, Your price
@@ -69,7 +80,7 @@ const HeaderSection = () => {
         <button
           type="button"
           style={{ backgroundColor: "#2591FE", borderRadius: "8px" }}
-          className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-6 font-bromega"
+          className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-4 font-bromega"
           onClick={handleClick}
         >
           Get my car valuation
@@ -84,6 +95,8 @@ const HeaderSection = () => {
         height={60}
         className="py-8"
       />
+      {isOpen && <Modal registration={registration} message={message} setIsOpen={setIsOpen} />}
+      {isLoading && <Loading />}
     </div>
   );
 };

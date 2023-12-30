@@ -55,7 +55,7 @@ const OfferSection = () => {
         <button
           type="button"
           style={{ backgroundColor: "#2591FE" }}
-          className="flex flex-row justify-center items-center gap-2 text-white w-full p-6 font-bromega rounded-xl font-bold text-xl"
+          className="flex flex-row justify-center items-center gap-2 text-white w-full p-4 font-bromega rounded-xl font-bold text-xl"
         >
           Get my car valuation
           <RightAngle />
