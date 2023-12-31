@@ -22,15 +22,7 @@ export const sendMail = async (
     html: render(EmailTemplate(optData)),
   };
 
-  await new Promise((resolve, reject) => {
-    transporter.sendMail(mailOptions, function (error, info) {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        console.log("email sent");
-        resolve(info);
-      }
-    });
-  });
+  const info = await transporter.sendMail(mailOptions);
+
+  return info;
 };

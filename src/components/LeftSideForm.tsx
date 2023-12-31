@@ -19,13 +19,15 @@ const sendUserEmail = async (data: any) => {
     body: JSON.stringify({ data }),
   });
 
-  if (!res.ok) {
-    const { error } = await res.json();
-    return error;
+  const response = await res.json();
+
+  if (response.status !== 200) {
+    const { error } = await response;
+    return { message: "Some problem occured.", error: error };
   }
 
-  const { message } = await res.json();
-  return message;
+  const { message } = await response;
+  return { message };
 };
 
 const HOUR = [
@@ -82,19 +84,18 @@ const LeftSideForm = () => {
       user: userInfo,
       car: { ...carData, ...details },
     });
+
     if (response.error) {
-      setIsOpen(true);
-      setMessage(response?.error);
       setLoading(false);
+      setMessage(response.message);
+      setIsOpen(true);
       return;
     }
-    if (response !== undefined) {
-      setMessage(response?.message);
-      setIsOpen(true);
-      router.push("/submission");
-      setIsOpen(false);
-      setLoading(false);
-    }
+
+    setLoading(false);
+    setMessage(response.message);
+    setIsOpen(true);
+    router.push("/submission");
   };
 
   return (
