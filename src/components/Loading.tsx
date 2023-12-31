@@ -5,9 +5,7 @@ const Loading = () => {
     <>
       <div className="darkBG" />
       <div className="centered">
-        <h1 className="text-3xl text-center">
-            Loading...
-        </h1>
+        <div className="loader"></div>
       </div>
     </>
   );
