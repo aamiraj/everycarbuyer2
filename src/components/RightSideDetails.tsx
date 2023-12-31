@@ -115,7 +115,7 @@ const RightSideDetails = () => {
           First Registered: <span>{details?.monthOfFirstRegistration}</span>
         </p>
       </div>
-      {isOpen && <Modal registration={carData?.registration} message={message} setIsOpen={setIsOpen} />}
+      {isOpen && <Modal heading={carData?.registration} message={message} setIsOpen={setIsOpen} />}
       {isLoading && <Loading />}
     </div>
   );

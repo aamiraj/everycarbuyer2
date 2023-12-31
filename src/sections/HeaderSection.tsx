@@ -95,7 +95,7 @@ const HeaderSection = () => {
         height={60}
         className="py-8"
       />
-      {isOpen && <Modal registration={registration} message={message} setIsOpen={setIsOpen} />}
+      {isOpen && <Modal heading={registration} message={message} setIsOpen={setIsOpen} />}
       {isLoading && <Loading />}
     </div>
   );

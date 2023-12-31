@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useState } from "react";
 import React from "react";
 
 
@@ -25,9 +25,9 @@ export function AllData({ children }: { children: ReactNode }) {
   });
   const [details, setDetails] = useState({});
 
-  useEffect(()=>{
-    console.log(details)
-  }, [details])
+  // useEffect(()=>{
+  //   console.log(details)
+  // }, [details])
 
   const values = { carData, setCarData, details, setDetails };
 

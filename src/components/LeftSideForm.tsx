@@ -1,14 +1,32 @@
-"use client"
+"use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useContext, useState } from "react";
 import Envelope from "../assets/envelope.png";
 import Telephone from "../assets/telephone.png";
 import Location from "../assets/location.png";
 import Calender from "../assets/calender.svg";
 import DownArrow from "../assets/downarrow.svg";
 import RightAngle from "../components/RightAngle";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
+import { DataContext } from "@/contexts/dataContext";
+import Modal from "./Modal";
+import Loading from "./Loading";
+
+const sendUserEmail = async (data: any) => {
+  const res = await fetch("/api/sendMail", {
+    method: "POST",
+    body: JSON.stringify({ data }),
+  });
+
+  if (!res.ok) {
+    const { error } = await res.json();
+    return error;
+  }
+
+  const { message } = await res.json();
+  return message;
+};
 
 const HOUR = [
   "00",
@@ -40,11 +58,45 @@ const HOUR = [
 const MINUTE = ["00", "10", "20", "30", "40", "50"];
 
 const LeftSideForm = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+  const [message, setMessage] = useState<any>();
+  const date = new Date().toISOString();
+  const today = date.slice(0, 10);
+  const [userInfo, setUserInfo] = useState({
+    email: "",
+    phone: "",
+    location: "",
+    isAnyTime: true,
+    date: today,
+    hour: "00",
+    minute: "00",
+    notifyMe: false,
+  });
   const router = useRouter();
+  const { carData, details }: any = useContext(DataContext);
 
-  const handleClick = () => {
-    router.push("/submission");
+  const handleClick = async () => {
+    setLoading(true);
+    const response = await sendUserEmail({
+      user: userInfo,
+      car: { ...carData, ...details },
+    });
+    if (response.error) {
+      setIsOpen(true);
+      setMessage(response?.error);
+      setLoading(false);
+      return;
+    }
+    if (response !== undefined) {
+      setMessage(response?.message);
+      setIsOpen(true);
+      router.push("/submission");
+      setIsOpen(false);
+      setLoading(false);
+    }
   };
+
   return (
     <div style={{ padding: "40px", borderRadius: "10px" }} className="bg-white">
       <h1
@@ -63,6 +115,10 @@ const LeftSideForm = () => {
             type="text"
             placeholder="Email address (So that we can keep you updated)"
             className="w-full p-4 text-black font-normal font-bromega rounded-r-md border border-[#2591FE] outline-none"
+            defaultValue={userInfo.email}
+            onChange={(e) =>
+              setUserInfo({ ...userInfo, email: e.target.value })
+            }
           />
         </div>
         {/* input group for call  */}
@@ -74,6 +130,10 @@ const LeftSideForm = () => {
             type="text"
             placeholder="Mobile (For our team to reach you)"
             className="w-full p-4 text-black font-normal font-bromega  rounded-r-md border border-[#2591FE] outline-none"
+            defaultValue={userInfo.phone}
+            onChange={(e) =>
+              setUserInfo({ ...userInfo, phone: e.target.value })
+            }
           />
         </div>
         {/* location input field  */}
@@ -85,6 +145,10 @@ const LeftSideForm = () => {
             type="text"
             placeholder="Postcode (Convenient collection)"
             className="w-full p-4 text-black font-normal font-bromega  rounded-r-md border border-[#2591FE] outline-none"
+            defaultValue={userInfo.location}
+            onChange={(e) =>
+              setUserInfo({ ...userInfo, location: e.target.value })
+            }
           />
         </div>
         {/* check time checkbox  */}
@@ -95,7 +159,13 @@ const LeftSideForm = () => {
           <div>
             <label className="checkBoxContainer font-sansation">
               Anytime
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                defaultChecked={userInfo.isAnyTime}
+                onChange={(e) =>
+                  setUserInfo({ ...userInfo, isAnyTime: e.target.checked })
+                }
+              />
               <span className="checkmark"></span>
             </label>
           </div>
@@ -103,9 +173,19 @@ const LeftSideForm = () => {
             {/* date picker input field  */}
             <span className="datepicker-toggle">
               <Image src={Calender} alt="Location" width={22} height={20} />
-              <label htmlFor="calender" className="font-sansation">Select Date</label>
+              <label htmlFor="calender" className="font-sansation">
+                {userInfo.date}
+              </label>
               <Image src={DownArrow} alt="Location" width={18} height={10} />
-              <input id="calender" type="date" className="datepicker-input" />
+              <input
+                id="calender"
+                type="date"
+                className="datepicker-input"
+                defaultValue={userInfo.date}
+                onChange={(e) =>
+                  setUserInfo({ ...userInfo, date: e.target.value })
+                }
+              />
             </span>
           </div>
           {/* hour select input field  */}
@@ -114,6 +194,10 @@ const LeftSideForm = () => {
               name="hour"
               id="hour"
               style={{ outline: "none", width: "100%" }}
+              defaultValue={userInfo.hour}
+              onChange={(e) =>
+                setUserInfo({ ...userInfo, hour: e.target.value })
+              }
             >
               {HOUR.map((value, i) => (
                 <option key={i} value={value}>
@@ -135,6 +219,10 @@ const LeftSideForm = () => {
               name="minute"
               id="minute"
               style={{ outline: "none", width: "100%" }}
+              defaultValue={userInfo.minute}
+              onChange={(e) =>
+                setUserInfo({ ...userInfo, minute: e.target.value })
+              }
             >
               {MINUTE.map((value, i) => (
                 <option key={i} value={value}>
@@ -155,7 +243,13 @@ const LeftSideForm = () => {
           <label className="checkBoxContainer font-sansation">
             Please exclude me from any communications that involve updates,
             price adjustments, and seasonal promotions.
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              defaultChecked={userInfo.notifyMe}
+              onChange={(e) =>
+                setUserInfo({ ...userInfo, notifyMe: e.target.checked })
+              }
+            />
             <span className="checkmark"></span>
           </label>
         </div>
@@ -169,6 +263,10 @@ const LeftSideForm = () => {
           <RightAngle />
         </button>
       </div>
+      {isOpen && (
+        <Modal heading={"Successful"} message={message} setIsOpen={setIsOpen} />
+      )}
+      {isLoading && <Loading />}
     </div>
   );
 };

@@ -6,17 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview-email": "email dev"
   },
   "dependencies": {
+    "@react-email/components": "0.0.12",
     "axios": "^1.6.2",
     "next": "14.0.0",
+    "nodemailer": "^6.9.8",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "1.10.0",
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.14",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
