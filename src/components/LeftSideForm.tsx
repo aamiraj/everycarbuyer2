@@ -269,7 +269,7 @@ const LeftSideForm = () => {
         <Modal heading={"Successful"} message={message} setIsOpen={setIsOpenSuccess} />
       )}
       {isOpenFailed && (
-        <Modal heading={"Successful"} message={message} setIsOpen={setIsOpenFailed} />
+        <Modal heading={"Failed"} message={message} setIsOpen={setIsOpenFailed} />
       )}
       {isLoading && <Loading />}
     </div>
