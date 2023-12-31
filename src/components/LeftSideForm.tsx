@@ -60,7 +60,8 @@ const HOUR = [
 const MINUTE = ["00", "10", "20", "30", "40", "50"];
 
 const LeftSideForm = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenSuccess, setIsOpenSuccess] = useState(false);
+  const [isOpenFailed, setIsOpenFailed] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [message, setMessage] = useState<any>();
   const date = new Date().toISOString();
@@ -88,13 +89,13 @@ const LeftSideForm = () => {
     if (response.error) {
       setLoading(false);
       setMessage(response.message);
-      setIsOpen(true);
+      setIsOpenFailed(true);
       return;
     }
 
     setLoading(false);
     setMessage(response.message);
-    setIsOpen(true);
+    setIsOpenSuccess(true);
     router.push("/submission");
   };
 
@@ -264,8 +265,11 @@ const LeftSideForm = () => {
           <RightAngle />
         </button>
       </div>
-      {isOpen && (
-        <Modal heading={"Successful"} message={message} setIsOpen={setIsOpen} />
+      {isOpenSuccess && (
+        <Modal heading={"Successful"} message={message} setIsOpen={setIsOpenSuccess} />
+      )}
+      {isOpenFailed && (
+        <Modal heading={"Successful"} message={message} setIsOpen={setIsOpenFailed} />
       )}
       {isLoading && <Loading />}
     </div>
