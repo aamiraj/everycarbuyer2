@@ -18,7 +18,7 @@ const InputFieldMileage = () => {
       </span>
       <input
         type="text"
-        placeholder="Mileage"
+        placeholder="MILEAGE"
         className="w-full p-4 text-black font-bold rounded-r-md border-t border-b border-r border-[#2591FE] outline-none"
         defaultValue={carData?.mileage}
         onChange={handleInput}
