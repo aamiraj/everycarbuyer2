@@ -13,7 +13,7 @@ type GuideType = {
 const GuideCard = ({ id, img, title, desc }: GuideType) => {
   return (
     <div className="mt-6 guideCardShadow">
-      <div className="relative rounded-none h-56">
+      <div className="relative rounded-none h-44">
         <Image
           src={img}
           alt={title}
@@ -26,7 +26,7 @@ const GuideCard = ({ id, img, title, desc }: GuideType) => {
         <div className="flex">
           <p className="outlinedNumber">{id}</p>
           <p
-            style={{ fontSize: "24px" }}
+            style={{ fontSize: "20px" }}
             className="mb-2 font-bold font-bromega text-center"
           >
             {title}

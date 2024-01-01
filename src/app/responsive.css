@@ -104,7 +104,8 @@
   }
   .guideGrid2 {
     grid-template-columns: 100%;
-    gap: 32px;
+    gap: 16px;
+    padding: 16px;
   }
 }
 
@@ -190,7 +191,7 @@
     left: 0;
   }
   .thankYouNote {
-    width: 90%;
+    width: 60%;
     position: relative;
     top: -200px;
     left: 0;
@@ -270,7 +271,7 @@
     left: 0;
   }
   .thankYouNote {
-    width: 90%;
+    width: 60%;
     position: relative;
     top: -200px;
     left: 0;
@@ -351,7 +352,7 @@
     left: 0;
   }
   .thankYouNote {
-    width: 90%;
+    width: 60%;
     position: relative;
     top: -200px;
     left: 0;

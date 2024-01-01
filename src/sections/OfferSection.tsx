@@ -83,18 +83,24 @@ const OfferSection = () => {
         <InputFieldMileage />
         <button
           type="button"
-          style={{ backgroundColor: "#2591FE" }}
-          className="flex flex-row justify-center items-center gap-2 text-white w-full p-4 font-bromega rounded-xl font-bold text-xl"
+          style={{
+            backgroundColor: `${isLoading ? "#d0d0d0" : "#2591FE"}`,
+            borderRadius: "8px",
+          }}
+          className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-4 font-bromega"
           onClick={handleClick}
+          disabled={isLoading}
         >
           Get my car valuation
-          <RightAngle />
+          <span className={isLoading ? "rightangle" : ""}>
+            <RightAngle />
+          </span>
         </button>
       </div>
       {isOpen && (
         <Modal heading={registration} message={message} setIsOpen={setIsOpen} />
       )}
-      {isLoading && <Loading />}
+      {/* {isLoading && <Loading />} */}
     </div>
   );
 };

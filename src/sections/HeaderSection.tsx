@@ -18,7 +18,7 @@ export const getDetails = async (reg: any) => {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    return res;
   }
 
   const { data } = await res.json();
@@ -37,29 +37,33 @@ const HeaderSection = () => {
   const router = useRouter();
 
   const handleClick = async () => {
-    setLoading(true)
+    setLoading(true);
     const vehicleData = await getDetails(registration);
     if (vehicleData?.errors) {
-      setIsOpen(true)
-      setMessage(vehicleData.errors[0].detail)
-      setDetails({})
-      setLoading(false)
+      setMessage(vehicleData.errors[0].detail);
+      setIsOpen(true);
+      setDetails({});
+      setLoading(false);
       return;
     }
-    if (vehicleData !== undefined) {
-      setDetails(vehicleData);
-      router.push("/details");
-      setLoading(false)
+    if (vehicleData?.status === 500) {
+      setMessage(vehicleData.statusText);
+      setIsOpen(true);
+      setLoading(false);
+      return;
     }
+    setDetails(vehicleData);
+    router.push("/details");
+    setLoading(false);
   };
 
   return (
     <div
-      style={{ gap: "16px", padding: "40px 8px" }}
+      style={{ gap: "16px", padding: "32px 8px" }}
       className="flex flex-col justify-center items-center radialgrad"
     >
       <h1
-        style={{ fontSize: "40px" }}
+        style={{ fontSize: "36px" }}
         className="text-white font-bold text-center font-bromega"
       >
         Your car, Your price
@@ -67,7 +71,7 @@ const HeaderSection = () => {
         Selling made simple
       </h1>
       <p
-        style={{ fontSize: "20px" }}
+        style={{ fontSize: "16px" }}
         className="text-center text-white font-bromega"
       >
         Find a competitive offer with a personal touch. Sell
@@ -79,24 +83,28 @@ const HeaderSection = () => {
         <InputFieldMileage />
         <button
           type="button"
-          style={{ backgroundColor: "#2591FE", borderRadius: "8px" }}
+          style={{ backgroundColor: `${isLoading ? "#d0d0d0" : "#2591FE"}`, borderRadius: "8px" }}
           className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-4 font-bromega"
           onClick={handleClick}
+          disabled={isLoading}
         >
           Get my car valuation
-          <RightAngle />
+          <span className={isLoading ? "rightangle" : ""}>
+            <RightAngle />
+          </span>
         </button>
       </div>
       <Image
-        style={{ margin: "54px 0px" }}
+        style={{ margin: "28px 0px" }}
         src={TrustPilot}
         alt="trustpilot logo"
-        width={345}
-        height={60}
-        className="py-8"
+        width={320}
+        height={64}
       />
-      {isOpen && <Modal heading={registration} message={message} setIsOpen={setIsOpen} />}
-      {isLoading && <Loading />}
+      {isOpen && (
+        <Modal heading={registration} message={message} setIsOpen={setIsOpen} />
+      )}
+      {/* {isLoading && <Loading />} */}
     </div>
   );
 };

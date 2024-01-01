@@ -116,6 +116,7 @@ const LeftSideForm = () => {
           <input
             type="text"
             placeholder="Email address (So that we can keep you updated)"
+            required
             className="w-full p-4 text-black font-normal font-bromega rounded-r-md border border-[#2591FE] outline-none"
             defaultValue={userInfo.email}
             onChange={(e) =>
@@ -257,21 +258,35 @@ const LeftSideForm = () => {
         </div>
         <button
           type="button"
-          onClick={handleClick}
-          style={{ backgroundColor: "#2591FE", borderRadius: "8px" }}
+          style={{
+            backgroundColor: `${isLoading ? "#d0d0d0" : "#2591FE"}`,
+            borderRadius: "8px",
+          }}
           className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-4 font-bromega"
+          onClick={handleClick}
+          disabled={isLoading}
         >
           Get my car valuation
-          <RightAngle />
+          <span className={isLoading ? "rightangle" : ""}>
+            <RightAngle />
+          </span>
         </button>
       </div>
       {isOpenSuccess && (
-        <Modal heading={"Successful"} message={message} setIsOpen={setIsOpenSuccess} />
+        <Modal
+          heading={"Successful"}
+          message={message}
+          setIsOpen={setIsOpenSuccess}
+        />
       )}
       {isOpenFailed && (
-        <Modal heading={"Failed"} message={message} setIsOpen={setIsOpenFailed} />
+        <Modal
+          heading={"Failed"}
+          message={message}
+          setIsOpen={setIsOpenFailed}
+        />
       )}
-      {isLoading && <Loading />}
+      {/* {isLoading && <Loading />} */}
     </div>
   );
 };

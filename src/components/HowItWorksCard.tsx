@@ -10,7 +10,7 @@ type GuideType = {
 const HowItWorksCard = ({ img, title, desc }: GuideType) => {
   return (
     <div className="mt-6 guideCardShadow">
-      <div className="relative rounded-none h-56">
+      <div className="relative rounded-none h-40">
         <Image
           src={img}
           alt={title}
