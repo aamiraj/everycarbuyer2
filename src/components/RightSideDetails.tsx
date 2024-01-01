@@ -97,7 +97,7 @@ const RightSideDetails = () => {
           Model: <span>{details?.wheelplan}</span>
         </p>
         <p>
-          MOT Expiry Data: <span>{details?.motExpiryDate}</span>
+          MOT Expiry Date: <span>{details?.motExpiryDate}</span>
         </p>
         <p>
           Year: <span>{details?.yearOfManufacture}</span>
