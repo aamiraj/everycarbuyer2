@@ -3,13 +3,16 @@
 import Image from "next/image";
 import React from "react";
 import UK from "../assets/united-kingdom.png";
-import { CarData, DataContext, ValueProps } from "@/contexts/dataContext";
+import { CarData, DataContext } from "@/contexts/dataContext";
 
 const InputFieldUK = () => {
   const { carData, setCarData }: any = React.useContext(DataContext);
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCarData((c: CarData) => ({ ...c, registration: event.target.value }));
+    setCarData((c: CarData) => ({
+      ...c,
+      registration: event.target.value.toUpperCase(),
+    }));
   };
 
   return (
@@ -22,6 +25,7 @@ const InputFieldUK = () => {
         type="text"
         placeholder="Enter your Reg"
         className="w-full p-4 text-black font-bold rounded-r-md border border-[#2591FE] outline-none"
+        style={{ textTransform: "uppercase" }}
         defaultValue={carData?.registration}
         onChange={handleInput}
       />

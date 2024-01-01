@@ -66,7 +66,7 @@ const RightSideDetails = () => {
           id="registration"
           className="carInfo font-bold text-2xl"
           defaultValue={details?.registrationNumber}
-          style={{ outline: "none" }}
+          style={{ outline: "none", textTransform: "uppercase" }}
           onChange={(event) =>
             setCarData((c: CarData) => ({
               ...c,

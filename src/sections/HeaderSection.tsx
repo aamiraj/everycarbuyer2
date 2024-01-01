@@ -11,7 +11,7 @@ import { DataContext } from "@/contexts/dataContext";
 import Modal from "@/components/Modal";
 import Loading from "@/components/Loading";
 
-const getDetails = async (reg: any) => {
+export const getDetails = async (reg: any) => {
   const res = await fetch("/api/vehicle", {
     method: "POST",
     body: JSON.stringify({ reg }),

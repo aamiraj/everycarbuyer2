@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+import React, { useContext, useState } from "react";
+import { DataContext } from "@/contexts/dataContext";
+import { useRouter } from "next/navigation";
 import RightAngle from "../components/RightAngle";
 import InputFieldUK from "@/components/InputFieldUK";
 import InputFieldMileage from "@/components/InputFieldMileage";
@@ -8,8 +10,37 @@ import RandomBlob from "../assets/randomBlob.png";
 import Cloud1 from "../assets/frontcloud1.svg";
 import Cloud2 from "../assets/frontcloud2.svg";
 import Cloud3 from "../assets/frontcloud3.svg";
+import { getDetails } from "./HeaderSection";
+import Modal from "@/components/Modal";
+import Loading from "@/components/Loading";
 
 const OfferSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const {
+    carData: { registration },
+    setDetails,
+  }: any = useContext(DataContext);
+  const router = useRouter();
+
+  const handleClick = async () => {
+    setLoading(true);
+    const vehicleData = await getDetails(registration);
+    if (vehicleData?.errors) {
+      setIsOpen(true);
+      setMessage(vehicleData.errors[0].detail);
+      setDetails({});
+      setLoading(false);
+      return;
+    }
+    if (vehicleData !== undefined) {
+      setDetails(vehicleData);
+      router.push("/details");
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="offerSection">
       <Image
@@ -28,9 +59,7 @@ const OfferSection = () => {
       <div className="backcloud3">
         <Image src={Cloud3} alt="Cloud" className="cloud3" />
       </div>
-      <h1
-        className="font-bold text-4xl text-start font-bromega text-white"
-      >
+      <h1 className="font-bold text-4xl text-start font-bromega text-white">
         Get your highest
         <span
           style={{ padding: "16px" }}
@@ -56,11 +85,16 @@ const OfferSection = () => {
           type="button"
           style={{ backgroundColor: "#2591FE" }}
           className="flex flex-row justify-center items-center gap-2 text-white w-full p-4 font-bromega rounded-xl font-bold text-xl"
+          onClick={handleClick}
         >
           Get my car valuation
           <RightAngle />
         </button>
       </div>
+      {isOpen && (
+        <Modal heading={registration} message={message} setIsOpen={setIsOpen} />
+      )}
+      {isLoading && <Loading />}
     </div>
   );
 };
