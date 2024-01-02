@@ -77,7 +77,13 @@
   /* details page responsive  */
   .formGrid {
     grid-template-columns: 100%;
-    padding: 32px 8px;
+    padding: 72px 8px;
+  }
+  #rightSideDetails{
+    order: 0;
+  }
+  #leftSideForm{
+    order: 1;
   }
   /* submission page responsive  */
   .thanksContainer {

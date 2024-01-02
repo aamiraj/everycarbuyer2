@@ -48,6 +48,7 @@ const RightSideDetails = () => {
 
   return (
     <div
+    id="rightSideDetails"
       style={{ padding: "0px 40px", borderRadius: "10px" }}
       className="font-bromega"
     >

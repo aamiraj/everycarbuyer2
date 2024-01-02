@@ -100,7 +100,7 @@ const LeftSideForm = () => {
   };
 
   return (
-    <div style={{ padding: "40px", borderRadius: "10px" }} className="bg-white">
+    <div id="leftSideForm" style={{ padding: "40px", borderRadius: "10px" }} className="bg-white">
       <h1
         style={{ fontSize: "28px", margin: "24px", color: "#2591FE" }}
         className="font-bold font-sansation text-center"
