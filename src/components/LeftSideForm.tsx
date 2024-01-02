@@ -11,7 +11,7 @@ import RightAngle from "../components/RightAngle";
 import { useRouter } from "next/navigation";
 import { DataContext } from "@/contexts/dataContext";
 import Modal from "./Modal";
-import Loading from "./Loading";
+import Loading from "./Loader";
 
 const sendUserEmail = async (data: any) => {
   const res = await fetch("/api/sendMail", {

@@ -9,7 +9,7 @@ import InputFieldMileage from "@/components/InputFieldMileage";
 import { useRouter } from "next/navigation";
 import { DataContext } from "@/contexts/dataContext";
 import Modal from "@/components/Modal";
-import Loading from "@/components/Loading";
+import Loading from "@/components/Loader";
 
 export const getDetails = async (reg: any) => {
   const res = await fetch("/api/vehicle", {

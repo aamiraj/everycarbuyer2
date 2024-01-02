@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loading = () => {
+const Loader = () => {
   return (
     <>
       <div className="darkBG" />
@@ -11,4 +11,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Loader;

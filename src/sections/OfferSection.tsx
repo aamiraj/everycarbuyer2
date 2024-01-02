@@ -12,7 +12,7 @@ import Cloud2 from "../assets/frontcloud2.svg";
 import Cloud3 from "../assets/frontcloud3.svg";
 import { getDetails } from "./HeaderSection";
 import Modal from "@/components/Modal";
-import Loading from "@/components/Loading";
+import Loading from "@/components/Loader";
 
 const OfferSection = () => {
   const [isOpen, setIsOpen] = useState(false);
