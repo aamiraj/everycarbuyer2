@@ -265,7 +265,7 @@
 }
 
 .formGrid {
-  padding: 28px 120px 80px 120px;
+  padding: 28px 64px 80px 64px;
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 16px;
