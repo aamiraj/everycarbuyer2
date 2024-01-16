@@ -1,7 +1,17 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .radialgrad h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .radialgrad p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .headerNavbar {
-    padding: 40px 8px;
+    padding: 24px 8px;
   }
   .spreadedBG {
     max-width: 512px;
@@ -51,7 +61,10 @@
   .secondBorderDesign {
     padding: 20px;
   }
-
+  .secondBorderDesign h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
   .randomBlob,
   .backcloud1,
   .backcloud2,
@@ -79,10 +92,10 @@
     grid-template-columns: 100%;
     padding: 72px 8px;
   }
-  #rightSideDetails{
+  #rightSideDetails {
     order: 0;
   }
-  #leftSideForm{
+  #leftSideForm {
     order: 1;
   }
   /* submission page responsive  */
@@ -118,7 +131,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
   .headerNavbar {
-    padding: 40px 8px;
+    padding: 24px 8px;
   }
 
   .guideGrid {
@@ -187,6 +200,19 @@
     grid-template-columns: 100%;
     gap: 0;
   }
+
+  .formGrid {
+    padding: 2rem 1rem 5rem 1rem;
+  }
+
+  #leftSideForm {
+    padding: 0 1rem;
+  }
+
+  #rightSideDetails {
+    padding: 0 1rem;
+  }
+
   /* submission page responsive  */
   .thanksContainer {
     flex-direction: column;
@@ -213,7 +239,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .headerNavbar {
-    padding: 40px 8px;
+    padding: 24px 8px;
   }
 
   .guideGrid {
@@ -267,6 +293,20 @@
     grid-template-columns: 49% 49%;
     gap: 16px;
   }
+
+  /* details page  */
+  .formGrid {
+    padding: 2rem 1rem 5rem 1rem;
+  }
+
+  #leftSideForm {
+    padding: 0 1rem;
+  }
+
+  #rightSideDetails {
+    padding: 0 1rem;
+  }
+
   /* submission page responsive  */
   .thanksContainer {
     flex-direction: column;
@@ -293,7 +333,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .headerNavbar {
-    padding: 40px 8px;
+    padding: 24px 8px;
   }
 
   .guideGrid {

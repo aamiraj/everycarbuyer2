@@ -62,18 +62,12 @@ const HeaderSection = () => {
       style={{ gap: "16px", padding: "32px 8px" }}
       className="flex flex-col justify-center items-center radialgrad"
     >
-      <h1
-        style={{ fontSize: "36px" }}
-        className="text-white font-bold text-center font-bromega"
-      >
+      <h1 className="text-white font-bold text-center font-bromega">
         Your car, Your price
         <br />
         Selling made simple
       </h1>
-      <p
-        style={{ fontSize: "16px" }}
-        className="text-center text-white font-bromega"
-      >
+      <p className="text-center text-white font-bromega">
         Find a competitive offer with a personal touch. Sell
         <br />
         confidently, sell with everycarbuyer.
@@ -83,7 +77,10 @@ const HeaderSection = () => {
         <InputFieldMileage />
         <button
           type="button"
-          style={{ backgroundColor: `${isLoading ? "#d0d0d0" : "#2591FE"}`, borderRadius: "8px" }}
+          style={{
+            backgroundColor: `${isLoading ? "#d0d0d0" : "#2591FE"}`,
+            borderRadius: "8px",
+          }}
           className="flex flex-row justify-center items-center gap-2 text-white text-lg font-bold w-full p-4 font-bromega"
           onClick={handleClick}
           disabled={isLoading}

@@ -21,8 +21,7 @@ import { useRouter } from "next/navigation";
 // };
 
 const RightSideDetails = () => {
-  const { carData, details }: any =
-    useContext(DataContext);
+  const { carData, details }: any = useContext(DataContext);
   const router = useRouter();
 
   // const handleClick = async () => {
@@ -47,11 +46,7 @@ const RightSideDetails = () => {
   };
 
   return (
-    <div
-    id="rightSideDetails"
-      style={{ padding: "0px 40px", borderRadius: "10px" }}
-      className="font-bromega"
-    >
+    <div id="rightSideDetails" className="font-bromega">
       <h1
         style={{ fontSize: "28px", margin: "16px 0", color: "#fff" }}
         className="font-bold flex justify-between"

@@ -25,6 +25,16 @@
   background-image: radial-gradient(circle at 85% 100%, #5cadffd9, #299cff);
 }
 
+.radialgrad h1 {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+.radialgrad p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .spreadedBG {
   gap: 1rem;
   border-radius: 1.25rem;
@@ -243,6 +253,11 @@
   border-top-right-radius: 16px;
 }
 
+#leftSideForm {
+  padding: 0 2.5rem;
+  border-radius: 10px;
+}
+
 .custom-shape-divider-bottom {
   position: absolute;
   bottom: 0;
@@ -265,10 +280,15 @@
 }
 
 .formGrid {
-  padding: 28px 64px 80px 64px;
+  padding: 32px 64px 80px 64px;
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 16px;
+}
+
+#rightSideDetails {
+  padding: 0 2.5rem;
+  border-radius: 10px;
 }
 
 /* Customize the label (the checkBoxContainer) */
@@ -621,7 +641,7 @@
   border: none;
   font-size: 18px;
   color: #fff;
-  background: #D03D33;
+  background: #d03d33;
   transition: all 0.25s ease;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
   position: absolute;
