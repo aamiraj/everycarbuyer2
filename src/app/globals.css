@@ -708,3 +708,417 @@
     transform: translateX(30px);
   }
 }
+
+/* responisveness is applying to the site with media queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .radialgrad h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .radialgrad p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .headerNavbar {
+    padding: 24px 8px;
+  }
+  .spreadedBG {
+    max-width: 512px;
+    width: 100%;
+  }
+
+  .guideGrid {
+    grid-template-columns: 100%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 100%;
+  }
+
+  .markedHeading {
+    padding: 1rem 2rem;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 75% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 70% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: column;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+  .secondBorderDesign h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .randomBlob,
+  .backcloud1,
+  .backcloud2,
+  .backcloud3 {
+    display: none;
+  }
+
+  .offerSection {
+    padding: 8px;
+  }
+  .commitmentSection {
+    padding: 80px 8px;
+  }
+  .footerSection {
+    padding: 40px 16px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+
+  /* details page responsive  */
+  .formGrid {
+    grid-template-columns: 100%;
+    padding: 72px 8px;
+  }
+  #rightSideDetails {
+    order: 0;
+  }
+  #leftSideForm {
+    order: 1;
+  }
+  /* submission page responsive  */
+  .thanksContainer {
+    flex-direction: column;
+  }
+  .thanksImgContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+  .thanksImg {
+    width: 200px;
+    height: 200px;
+  }
+  .thankYouNote {
+    width: 90%;
+    position: relative;
+    top: -200px;
+    left: 0;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
+  }
+  .guideGrid2 {
+    grid-template-columns: 100%;
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .headerNavbar {
+    padding: 24px 8px;
+  }
+
+  .guideGrid {
+    grid-template-columns: 100%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 100%;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 59% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 35% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: column;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+
+  .randomBlob,
+  .cloud1,
+  .cloud2,
+  .cloud3 {
+    display: none;
+  }
+
+  .offerSection {
+    padding: 8px;
+  }
+  .commitmentSection {
+    padding: 80px 20px;
+  }
+  .footerSection {
+    padding: 40px 16px;
+  }
+  .footerGrid {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+
+  /* details page  */
+  .carinfogrid {
+    grid-template-columns: 100%;
+    gap: 0;
+  }
+
+  .formGrid {
+    padding: 2rem 1rem 5rem 1rem;
+  }
+
+  #leftSideForm {
+    padding: 0 1rem;
+  }
+
+  #rightSideDetails {
+    padding: 0 1rem;
+  }
+
+  /* submission page responsive  */
+  .thanksContainer {
+    flex-direction: column;
+  }
+  .thanksImgContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .thankYouNote {
+    width: 60%;
+    position: relative;
+    top: -200px;
+    left: 0;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
+  }
+  .guideGrid2 {
+    grid-template-columns: 100%;
+    gap: 32px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .headerNavbar {
+    padding: 24px 8px;
+  }
+
+  .guideGrid {
+    grid-template-columns: 49% 49%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 49% 49%;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 59% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 35% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: column;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+
+  .commitmentSection {
+    padding: 80px 54px;
+  }
+
+  .footerSection {
+    padding: 40px 16px;
+  }
+  .footerGrid {
+    grid-template-columns: 49% 49%;
+    gap: 16px;
+  }
+
+  /* details page  */
+  .formGrid {
+    padding: 2rem 1rem 5rem 1rem;
+  }
+
+  #leftSideForm {
+    padding: 0 1rem;
+  }
+
+  #rightSideDetails {
+    padding: 0 1rem;
+  }
+
+  /* submission page responsive  */
+  .thanksContainer {
+    flex-direction: column;
+  }
+  .thanksImgContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .thankYouNote {
+    width: 60%;
+    position: relative;
+    top: -200px;
+    left: 0;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
+  }
+  .guideGrid2 {
+    grid-template-columns: 49% 49%;
+    gap: 32px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .headerNavbar {
+    padding: 24px 8px;
+  }
+
+  .guideGrid {
+    grid-template-columns: 32% 32% 32%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .reasonSection {
+    padding: 40px 8px;
+  }
+
+  .reasonGrid {
+    grid-template-columns: 32% 32% 32%;
+  }
+
+  .markerBG {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 59% 18%;
+  }
+
+  .markerBG2 {
+    padding: 1rem;
+    background-image: url(../assets//marker.png);
+    background-repeat: no-repeat;
+    background-position: 35% 18%;
+  }
+
+  .testimonialCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .testimonialCard {
+    padding: 1rem;
+  }
+
+  .secondBorderDesign {
+    padding: 20px;
+  }
+
+  .commitmentSection {
+    padding: 80px 108px;
+  }
+
+  .footerSection {
+    padding: 80px 16px;
+  }
+  .footerGrid {
+    grid-template-columns: 49% 49%;
+    gap: 16px;
+  }
+  /* submission page responsive  */
+  .thanksContainer {
+    flex-direction: column;
+  }
+  .thanksImgContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .thankYouNote {
+    width: 60%;
+    position: relative;
+    top: -200px;
+    left: 0;
+    padding: 200px 48px 48px 48px;
+    text-align: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
