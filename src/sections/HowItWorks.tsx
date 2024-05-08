@@ -5,7 +5,7 @@ import React from 'react'
 
 const HowItWorks = () => {
   return (
-    <div style={{margin: "100px 0"}}>
+    <div style={{padding: "100px 0"}}>
         {/* <p
         style={{ fontSize: "36px", padding: "32px" }}
         className="font-bold text-center font-bromega text-black"

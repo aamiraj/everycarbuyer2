@@ -4,6 +4,7 @@ import SubmissionHeader from "@/sections/SubmissionHeader";
 import HowItWorks from "@/sections/HowItWorks";
 import FooterSection from "@/sections/FooterSection";
 import FinalMessage from "@/sections/FinalMessage";
+import GoToTopButton from "@/components/GoToTopButton";
 
 const page = () => {
   return (
@@ -14,7 +15,7 @@ const page = () => {
       <section id="submissionHeader">
         <SubmissionHeader />
       </section>
-      <section id="howitworks">
+      <section id="guide">
         <HowItWorks />
       </section>
       <section id="finalmessage">
@@ -23,6 +24,7 @@ const page = () => {
       <section id="footer">
         <FooterSection />
       </section>
+      <GoToTopButton />
     </main>
   );
 };

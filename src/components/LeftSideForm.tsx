@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import { DataContext } from "@/contexts/dataContext";
 import Modal from "./Modal";
 import Loading from "./Loader";
+import { FaUser } from "react-icons/fa";
 
 const sendUserEmail = async (data: any) => {
   const res = await fetch("/api/sendMail", {
@@ -67,6 +68,7 @@ const LeftSideForm = () => {
   const date = new Date().toISOString();
   const today = date.slice(0, 10);
   const [userInfo, setUserInfo] = useState({
+    name: "",
     email: "",
     phone: "",
     location: "",
@@ -108,13 +110,29 @@ const LeftSideForm = () => {
         Your offer is guaranteed for 4 days
       </h1>
       <div style={{ gap: "16px" }} className="flex flex-col my-4 items-center ">
+        {/* input group for name  */}
+        <div className="w-full flex flex-row gap-0">
+          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md">
+            <FaUser style={{ width: 22, height: 20, color: "white" }} />
+          </span>
+          <input
+            type="text"
+            placeholder="Name"
+            required
+            className="w-full p-4 text-black font-normal font-bromega rounded-r-md border border-[#2591FE] outline-none"
+            defaultValue={userInfo.name}
+            onChange={(e) =>
+              setUserInfo({ ...userInfo, name: e.target.value })
+            }
+          />
+        </div>
         {/* input group for email  */}
         <div className="w-full flex flex-row gap-0">
           <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md">
             <Image src={Envelope} alt="Envelope" width={22} height={14} />
           </span>
           <input
-            type="text"
+            type="email"
             placeholder="Email address (So that we can keep you updated)"
             required
             className="w-full p-4 text-black font-normal font-bromega rounded-r-md border border-[#2591FE] outline-none"

@@ -11,11 +11,10 @@ const GoToTopButton = () => {
   };
 
   useEffect(() => {
+    if (!window) return;
     function scrollFunction() {
       // Get the button:
-      let mybutton = document.getElementById(
-        "go-to-top-btn"
-      ) as HTMLButtonElement;
+      let mybutton = document.getElementById("go-to-top-btn") as HTMLElement;
       if (
         document.body.scrollTop > 20 ||
         document.documentElement.scrollTop > 20

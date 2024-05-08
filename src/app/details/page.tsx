@@ -2,6 +2,7 @@ import { HeaderNavBar } from "@/components/HeaderNavBar";
 import BigForm from "@/sections/BigForm";
 import ImportantMessage from "@/sections/ImportantMessage";
 import FooterSection from "@/sections/FooterSection";
+import GoToTopButton from "@/components/GoToTopButton";
 
 const page = () => {
   return (
@@ -31,6 +32,7 @@ const page = () => {
       <section id="footer">
         <FooterSection />
       </section>
+      <GoToTopButton />
     </main>
   );
 };

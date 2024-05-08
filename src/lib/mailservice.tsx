@@ -2,11 +2,7 @@ import EmailTemplate from "@/components/EmailTemplate";
 import { render } from "@react-email/components";
 import nodemailer from "nodemailer";
 
-export const sendMail = async (
-  subject: string,
-  toEmail: string,
-  optData: string
-) => {
+export const sendMail = async (subject: string, user: any, car: any) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -16,10 +12,10 @@ export const sendMail = async (
   });
 
   const mailOptions = {
-    from: process.env.NODEMAILER_EMAIL,
-    to: toEmail,
+    from: `Everycarbuyer ${process.env.NODEMAILER_EMAIL}`,
+    to: user?.email,
     subject: subject,
-    html: render(EmailTemplate(optData)),
+    html: render(EmailTemplate({ ...car, ...user })),
   };
 
   const info = await transporter.sendMail(mailOptions);

@@ -8,7 +8,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   try {
     const result = await sendMail(
       "Get your car evaluation from EveryCarBuyer.",
-      user.email,
+      user,
       car
     );
     return Response.json({
