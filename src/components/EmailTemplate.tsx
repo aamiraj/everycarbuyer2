@@ -151,17 +151,20 @@ const headerText = {
   fontSize: "20px",
   lineHeight: "24px",
   fontWeight: 600,
+  color: "black",
 };
 
 const attributeText = {
   fontSize: "16px",
   lineHeight: "20px",
   fontWeight: 500,
+  color: "black",
 };
 
 const infoText = {
   fontSize: "16px",
   lineHeight: "20px",
+  color: "black",
 };
 
 const tableContent = {
