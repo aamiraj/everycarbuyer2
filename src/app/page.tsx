@@ -1,3 +1,4 @@
+import GoToTopButton from "@/components/GoToTopButton";
 import { HeaderNavBar } from "@/components/HeaderNavBar";
 import CommitmentSection from "@/sections/CommitmentSection";
 import FooterSection from "@/sections/FooterSection";
@@ -22,7 +23,7 @@ export default function Home() {
       <section id="reason">
         <ReasonSection />
       </section>
-      <section id="testimonial">
+      <section id="testimonials">
         <Testimonials />
       </section>
       <section id="commitment">
@@ -34,6 +35,7 @@ export default function Home() {
       <section id="footer">
         <FooterSection />
       </section>
+      <GoToTopButton />
     </main>
   );
 }

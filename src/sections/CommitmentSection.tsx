@@ -8,7 +8,7 @@ const CommitmentSection = () => {
       <div className="borderDesign">
         <div className="secondBorderDesign">
           <h1
-            style={{ color: "#2591FE" }}
+            style={{ color: "#2591FE", padding: "16px 0px" }}
             className="font-bold text-4xl text-center font-bromega"
           >
             {"Everycarbuyer, Your Car's Value, Our Expert Deal."}

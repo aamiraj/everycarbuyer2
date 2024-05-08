@@ -31,8 +31,9 @@ const FooterSection = () => {
             style={{ width: "250px", color: "#727272" }}
             className="font-poppins text-base"
           >
-            This Bucheen is so cool, I found the partner I wanted. and it&apos;s very
-            easy to use
+            {/* This Bucheen is so cool, I found the partner I wanted. and it&apos;s very
+            easy to use */}
+            Best Offers for Every Car - Your Trusted Buyer.
           </p>
           <div
             style={{ padding: "16px" }}
@@ -45,7 +46,7 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
-                borderRadius: "50%"
+                borderRadius: "50%",
               }}
               className="flex items-center justify-center"
             >
@@ -61,7 +62,7 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
-                borderRadius: "50%"
+                borderRadius: "50%",
               }}
               className="flex items-center justify-center"
             >
@@ -74,7 +75,7 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
-                borderRadius: "50%"
+                borderRadius: "50%",
               }}
               className="flex items-center justify-center"
             >
@@ -87,7 +88,7 @@ const FooterSection = () => {
                 height: "48px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 padding: "4px",
-                borderRadius: "50%"
+                borderRadius: "50%",
               }}
               className="flex items-center justify-center"
             >
@@ -112,22 +113,27 @@ const FooterSection = () => {
             </li>
           </ul>
         </div>
-        <div>
-          <Link style={{display: "block", margin: "16px 0"}} href={"#"} className="font-bold text-lg">Subscribe</Link>
+        {/* <div>
+          <Link
+            style={{ display: "block", margin: "16px 0" }}
+            href={"#"}
+            className="font-bold text-lg"
+          >
+            Subscribe
+          </Link>
           <p>Don&apos;t miss our future updates! Get Subscribed now!</p>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <h1 className="font-bold text-lg my-4">Company</h1>
           <Link href={"#"}>Career</Link>
-        </div>
+        </div> */}
         <div>
           <h1 className="font-bold text-lg my-4">Connect With Us</h1>
-          <ul style={{ marginLeft: "40px" }}>
-            <li style={{ listStyleType: "disc" }}>
-              #Shop No: 307 & 327, 72 Rupayan Centre, Wirelessgate,
-              Mohakhali.,Dhaka, Bangladesh
+          <ul>
+            <li>
+              Huddersfield, West Yorkshire.
             </li>
-            <li style={{ listStyleType: "disc" }}>01686-777333</li>
+            <li>07857380252</li>
           </ul>
         </div>
       </div>

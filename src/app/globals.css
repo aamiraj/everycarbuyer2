@@ -12,6 +12,36 @@
   src: url("../assets/Sansation/Sansation_Regular.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-panel {
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#go-to-top-btn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #299cff; /* Set a background color */
+  border-radius: 50%;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#go-to-top-btn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
 .max-width-1600 {
   max-width: 1600px;
   margin: auto;
@@ -884,6 +914,10 @@
 
   .secondBorderDesign {
     padding: 20px;
+  }
+
+  .secondBorderDesign p {
+    padding: 16px 16px 16px 8px;
   }
 
   .randomBlob,
