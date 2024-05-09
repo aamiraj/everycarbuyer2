@@ -9,6 +9,7 @@ const inter = Inter({
 });
 
 const FooterSection = () => {
+  const currentYear: number = new Date().getFullYear();
   return (
     <footer className="footerSection">
       <div className="footerGrid">
@@ -99,7 +100,7 @@ const FooterSection = () => {
             </Link>
           </div>
         </div>
-        <div>
+        {/* <div>
           <h1 className="font-bold text-lg my-4">Useful Links</h1>
           <ul>
             <li>
@@ -112,7 +113,7 @@ const FooterSection = () => {
               <Link href={"#"}>Server Service</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         {/* <div>
           <Link
             style={{ display: "block", margin: "16px 0" }}
@@ -130,9 +131,7 @@ const FooterSection = () => {
         <div>
           <h1 className="font-bold text-lg my-4">Connect With Us</h1>
           <ul>
-            <li>
-              Huddersfield, West Yorkshire.
-            </li>
+            <li>Huddersfield, West Yorkshire.</li>
             <li>07857380252</li>
           </ul>
         </div>
@@ -143,7 +142,7 @@ const FooterSection = () => {
           style={{ padding: "40px" }}
           className={`${inter.className} text-center text-sm`}
         >
-          &copy; Modern Mobile Care 2023 - All Rights Reserved
+          &copy; Everycarbuyer {currentYear} - All Rights Reserved
         </p>
       </div>
     </footer>

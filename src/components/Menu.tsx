@@ -23,7 +23,7 @@ const Menu = () => {
         className="cursor-pointer hover:bg-gray-200 p-2 rounded-full transition-all"
         onClick={() => handleMenu("menu-options")}
       >
-        <Image src={MenuIcon} width={22} height={26} alt="menu" />
+        <Image src={MenuIcon} width={22} height={26} alt="menu" quality={100} />
       </div>
       <MenuOptions />
     </div>

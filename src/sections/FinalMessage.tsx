@@ -24,7 +24,7 @@ const FinalMessage = () => {
           Negotiate Your Price, Never Settle for Less!
         </p>
         <div className="imgContainer">
-          <Image src={Trustpilot} alt="trustpilot" width={345} />
+          <Image src={Trustpilot} alt="trustpilot" width={345} quality={100} />
         </div>
       </div>
     </div>

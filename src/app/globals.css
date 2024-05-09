@@ -86,13 +86,13 @@ html {
 
 .markerBG {
   padding: 1.25rem;
-  background-image: url(../assets//marker.png);
+  background-image: url(../assets//marker.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .markerBG2 {
   padding: 1rem;
-  background-image: url(../assets//marker.png);
+  background-image: url(../assets//marker.svg);
   background-repeat: no-repeat;
   background-position: 43% 18%;
 }
@@ -778,19 +778,19 @@ html {
     padding: 1rem 2rem;
   }
 
-  .markerBG {
-    padding: 1rem;
-    background-image: url(../assets//marker.png);
+  /* .markerBG {
+    padding: 1.25rem;
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 75% 18%;
   }
 
   .markerBG2 {
-    padding: 1rem;
-    background-image: url(../assets//marker.png);
+    padding: 1.25rem;
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 70% 18%;
-  }
+  } */
 
   .testimonialCard {
     flex-direction: column;
@@ -803,10 +803,16 @@ html {
   .secondBorderDesign {
     padding: 20px;
   }
+
   .secondBorderDesign h1 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
+
+  .secondBorderDesign h1, p {
+    transform: translateX(-10px);
+  }
+
   .randomBlob,
   .backcloud1,
   .backcloud2,
@@ -818,7 +824,7 @@ html {
     padding: 8px;
   }
   .commitmentSection {
-    padding: 80px 8px;
+    padding: 80px 10px;
   }
   .footerSection {
     padding: 40px 16px;
@@ -892,14 +898,14 @@ html {
 
   .markerBG {
     padding: 1rem;
-    background-image: url(../assets//marker.png);
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 59% 18%;
   }
 
   .markerBG2 {
     padding: 1rem;
-    background-image: url(../assets//marker.png);
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 35% 18%;
   }
@@ -1004,14 +1010,14 @@ html {
 
   .markerBG {
     padding: 1rem;
-    background-image: url(../assets//marker.png);
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 59% 18%;
   }
 
   .markerBG2 {
     padding: 1rem;
-    background-image: url(../assets//marker.png);
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 35% 18%;
   }
@@ -1098,14 +1104,14 @@ html {
 
   .markerBG {
     padding: 1rem;
-    background-image: url(../assets//marker.png);
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 59% 18%;
   }
 
   .markerBG2 {
     padding: 1rem;
-    background-image: url(../assets//marker.png);
+    background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
     background-position: 35% 18%;
   }

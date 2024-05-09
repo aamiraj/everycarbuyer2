@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import Car from "../assets/car.png";
+import Car from "../assets/car.svg";
 import { CarData, DataContext } from "@/contexts/dataContext";
-import { cardData } from "@/data/cardData";
 
 const InputFieldMileage = () => {
   const { carData, setCarData }: any = React.useContext(DataContext);
@@ -12,14 +11,14 @@ const InputFieldMileage = () => {
   };
 
   return (
-    <div className="w-full flex flex-row gap-0">
-      <span className="bg-white p-2 flex flex-col gap-1 justify-center items-center rounded-l-md border-t border-b border-l border-[#2591FE] ">
-        <Image src={Car} alt="United Kingdom" width={36} height={23} />
+    <div className="w-full flex flex-row gap-0 border border-[#2591FE] rounded-lg">
+      <span className="bg-white p-2 flex flex-col gap-1 justify-center items-center rounded-l-lg rounded-r-none">
+        <Image src={Car} alt="United Kingdom" width={36} height={23} quality={100} />
       </span>
       <input
         type="text"
         placeholder="MILEAGE"
-        className="w-full p-4 text-black font-bold rounded-r-md border-t border-b border-r border-[#2591FE] outline-none"
+        className="w-full p-4 text-black font-bold rounded-xl outline-none"
         defaultValue={carData?.mileage}
         onChange={handleInput}
       />

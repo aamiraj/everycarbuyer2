@@ -49,15 +49,16 @@ const OfferSection = () => {
         width={216}
         height={199}
         className="randomBlob"
+        quality={100}
       />
       <div className="backcloud1">
-        <Image src={Cloud1} alt="Cloud" className="cloud1" />
+        <Image src={Cloud1} alt="Cloud" className="cloud1" quality={100} />
       </div>
       <div className="backcloud2">
-        <Image src={Cloud2} alt="Cloud" className="cloud2" />
+        <Image src={Cloud2} alt="Cloud" className="cloud2" quality={100} />
       </div>
       <div className="backcloud3">
-        <Image src={Cloud3} alt="Cloud" className="cloud3" />
+        <Image src={Cloud3} alt="Cloud" className="cloud3" quality={100} />
       </div>
       <h1 className="font-bold text-4xl text-start font-bromega text-white">
         Get your highest

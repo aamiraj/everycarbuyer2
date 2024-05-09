@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const RightAngle = () => {
     return (
-        <Image src={RightAngleIcon} width={10} height={16} alt='right angle'/>
+        <Image src={RightAngleIcon} width={10} height={16} alt='right angle' quality={100}/>
       ) 
 }
 

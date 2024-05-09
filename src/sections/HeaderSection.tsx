@@ -97,6 +97,7 @@ const HeaderSection = () => {
         alt="trustpilot logo"
         width={320}
         height={64}
+        quality={100}
       />
       {isOpen && (
         <Modal heading={registration} message={message} setIsOpen={setIsOpen} />

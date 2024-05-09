@@ -20,7 +20,7 @@ const TestimonialCard = ({ profileImg, name, comment }: TestimonialType) => {
         </p>
       </div>
       <div className="pt-0 flex flex-row gap-2 items-center">
-        <Image src={profileImg} width={60} alt={name} />
+        <Image src={profileImg} width={60} alt={name} quality={100} />
         <p style={{ fontSize: "22px" }} className="font-bromega">
           {name}
         </p>

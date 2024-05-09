@@ -19,7 +19,7 @@ const ImportantMessage = () => {
         ensuring you&apos;re informed about any changes, if there are any.
       </p>
       <div className="imgContainer">
-        <Image src={Trustpilot} alt="trustpilot" width={345} />
+        <Image src={Trustpilot} alt="trustpilot" width={345} height={60} quality={100} />
       </div>
     </div>
   );

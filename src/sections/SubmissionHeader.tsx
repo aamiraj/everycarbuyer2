@@ -8,7 +8,7 @@ const SubmissionHeader = () => {
       <div className="thanksContainer">
         <div className="thanksImgContainer">
           <div className="thanksImg">
-            <Image src={ThankYou} alt="thank you" width={200} />
+            <Image src={ThankYou} alt="thank you" width={200} quality={100} />
           </div>
         </div>
         <div className="thankYouNote">

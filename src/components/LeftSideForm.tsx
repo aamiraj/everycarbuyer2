@@ -2,16 +2,15 @@
 
 import Image from "next/image";
 import React, { useContext, useState } from "react";
-import Envelope from "../assets/envelope.png";
-import Telephone from "../assets/telephone.png";
-import Location from "../assets/location.png";
+import Envelope from "../assets/envelope.svg";
+import Telephone from "../assets/telephone.svg";
+import Location from "../assets/location.svg";
 import Calender from "../assets/calender.svg";
 import DownArrow from "../assets/downarrow.svg";
 import RightAngle from "../components/RightAngle";
 import { useRouter } from "next/navigation";
 import { DataContext } from "@/contexts/dataContext";
 import Modal from "./Modal";
-import Loading from "./Loader";
 import { FaUser } from "react-icons/fa";
 
 const sendUserEmail = async (data: any) => {
@@ -111,31 +110,35 @@ const LeftSideForm = () => {
       </h1>
       <div style={{ gap: "16px" }} className="flex flex-col my-4 items-center ">
         {/* input group for name  */}
-        <div className="w-full flex flex-row gap-0">
-          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md">
-            <FaUser style={{ width: 22, height: 20, color: "white" }} />
+        <div className="w-full flex flex-row gap-0 border border-[#2591FE] rounded-lg">
+          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center  rounded-l-md rounded-r-none">
+            <FaUser style={{ width: 20, height: 20, color: "white" }} />
           </span>
           <input
             type="text"
             placeholder="Name"
             required
-            className="w-full p-4 text-black font-normal font-bromega rounded-r-md border border-[#2591FE] outline-none"
+            className="w-full p-4 text-black font-normal font-bromega outline-none rounded-xl"
             defaultValue={userInfo.name}
-            onChange={(e) =>
-              setUserInfo({ ...userInfo, name: e.target.value })
-            }
+            onChange={(e) => setUserInfo({ ...userInfo, name: e.target.value })}
           />
         </div>
         {/* input group for email  */}
-        <div className="w-full flex flex-row gap-0">
-          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md">
-            <Image src={Envelope} alt="Envelope" width={22} height={14} />
+        <div className="w-full flex flex-row gap-0 border border-[#2591FE] rounded-lg">
+          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md rounded-r-none">
+            <Image
+              src={Envelope}
+              alt="Envelope"
+              width={22}
+              height={14}
+              quality={100}
+            />
           </span>
           <input
             type="email"
             placeholder="Email address (So that we can keep you updated)"
             required
-            className="w-full p-4 text-black font-normal font-bromega rounded-r-md border border-[#2591FE] outline-none"
+            className="w-full p-4 text-black font-normal font-bromega outline-none rounded-xl"
             defaultValue={userInfo.email}
             onChange={(e) =>
               setUserInfo({ ...userInfo, email: e.target.value })
@@ -143,14 +146,20 @@ const LeftSideForm = () => {
           />
         </div>
         {/* input group for call  */}
-        <div className="w-full flex flex-row gap-0">
-          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md">
-            <Image src={Telephone} alt="Telephone" width={22} height={20} />
+        <div className="w-full flex flex-row gap-0 border border-[#2591FE] rounded-lg">
+          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md rounded-r-none">
+            <Image
+              src={Telephone}
+              alt="Telephone"
+              width={22}
+              height={20}
+              quality={100}
+            />
           </span>
           <input
             type="text"
             placeholder="Mobile (For our team to reach you)"
-            className="w-full p-4 text-black font-normal font-bromega  rounded-r-md border border-[#2591FE] outline-none"
+            className="w-full p-4 text-black font-normal font-bromega outline-none rounded-xl"
             defaultValue={userInfo.phone}
             onChange={(e) =>
               setUserInfo({ ...userInfo, phone: e.target.value })
@@ -158,14 +167,20 @@ const LeftSideForm = () => {
           />
         </div>
         {/* location input field  */}
-        <div className="w-full flex flex-row gap-0">
-          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md">
-            <Image src={Location} alt="Location" width={22} height={20} />
+        <div className="w-full flex flex-row gap-0 border border-[#2591FE] rounded-lg">
+          <span className="bg-[#299CFF] p-2 flex flex-col gap-1 justify-center items-center rounded-l-md rounded-r-none">
+            <Image
+              src={Location}
+              alt="Location"
+              width={22}
+              height={20}
+              quality={100}
+            />
           </span>
           <input
             type="text"
             placeholder="Postcode (Convenient collection)"
-            className="w-full p-4 text-black font-normal font-bromega  rounded-r-md border border-[#2591FE] outline-none"
+            className="w-full p-4 text-black font-normal font-bromega outline-none rounded-xl"
             defaultValue={userInfo.location}
             onChange={(e) =>
               setUserInfo({ ...userInfo, location: e.target.value })
@@ -193,11 +208,23 @@ const LeftSideForm = () => {
           <div>
             {/* date picker input field  */}
             <span className="datepicker-toggle">
-              <Image src={Calender} alt="Location" width={22} height={20} />
+              <Image
+                src={Calender}
+                alt="Location"
+                width={22}
+                height={20}
+                quality={100}
+              />
               <label htmlFor="calender" className="font-sansation">
                 {userInfo.date}
               </label>
-              <Image src={DownArrow} alt="Location" width={18} height={10} />
+              <Image
+                src={DownArrow}
+                alt="Location"
+                width={18}
+                height={10}
+                quality={100}
+              />
               <input
                 id="calender"
                 type="date"
@@ -232,6 +259,7 @@ const LeftSideForm = () => {
               alt="Downarrow"
               width={18}
               height={10}
+              quality={100}
             />
           </div>
           {/* minute select input field  */}
@@ -257,6 +285,7 @@ const LeftSideForm = () => {
               alt="Downarrow"
               width={18}
               height={10}
+              quality={100}
             />
           </div>
         </div>
