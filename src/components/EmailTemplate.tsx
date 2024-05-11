@@ -48,34 +48,96 @@ const EveryCarBuyerInfo = (data: any) => (
           </Text>
         </Section>
         <Section style={tableContent}>
-          <Row>
-            <Column style={{ padding: "8px" }}>
-              <Text style={headerText}>Attribute</Text>
-              <Text style={attributeText}>Registration Number</Text>
-              <Text style={attributeText}>Mileage</Text>
-              <Text style={attributeText}>Manufacturer</Text>
-              <Text style={attributeText}>Model</Text>
-              <Text style={attributeText}>MOT Expiry Data</Text>
-              <Text style={attributeText}>Year</Text>
-              <Text style={attributeText}>Colour</Text>
-              <Text style={attributeText}>Fuel Type</Text>
-              <Text style={attributeText}>Engine Size</Text>
-              <Text style={attributeText}>First Registered</Text>
-            </Column>
-            <Column style={{ padding: "8px" }}>
-              <Text style={headerText}>Data</Text>
-              <Text style={infoText}>{data?.registrationNumber}</Text>
-              <Text style={infoText}>{data?.mileage}</Text>
-              <Text style={infoText}>{data?.make}</Text>
-              <Text style={infoText}>{data?.model}</Text>
-              <Text style={infoText}>{data?.motExpiryDate}</Text>
-              <Text style={infoText}>{data?.yearOfManufacture}</Text>
-              <Text style={infoText}>{data?.colour}</Text>
-              <Text style={infoText}>{data?.fuelType}</Text>
-              <Text style={infoText}>{data?.engineCapacity}</Text>
-              <Text style={infoText}>{data?.monthOfFirstRegistration}</Text>
-            </Column>
-          </Row>
+          <Container>
+            <Row>
+              <Column style={column}>
+                <Text style={headerText}>Attribute</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={headerText}>Data</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Registration Number</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.registrationNumber}</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Mileage</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.mileage}</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Manufacturer</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.make}</Text>
+              </Column>
+            </Row>
+            {/* <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Model</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.model}</Text>
+              </Column>
+            </Row> */}
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>MOT Expiry Data</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.motExpiryDate}</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Year</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.yearOfManufacture}</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Colour</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.colour}</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Fuel Type</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.fuelType}</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>Engine Size</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.engineCapacity}</Text>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={column}>
+                <Text style={attributeText}>First Registered</Text>
+              </Column>
+              <Column style={column}>
+                <Text style={infoText}>{data?.monthOfFirstRegistration}</Text>
+              </Column>
+            </Row>
+          </Container>
           <Hr style={hr} />
         </Section>
         <Section style={paragraphContent}>
@@ -147,24 +209,34 @@ const hr = {
   margin: "20px 0",
 };
 
+const column = {
+  width: "50%",
+};
+
 const headerText = {
-  fontSize: "20px",
-  lineHeight: "24px",
+  fontSize: "16px",
+  lineHeight: "20px",
   fontWeight: 600,
-  color: "black",
+  padding: "8px",
+  margin: 0,
+  color: "#000",
 };
 
 const attributeText = {
-  fontSize: "16px",
-  lineHeight: "20px",
+  fontSize: "14px",
+  lineHeight: "18px",
   fontWeight: 500,
-  color: "black",
+  padding: "8px",
+  margin: 0,
+  color: "#000",
 };
 
 const infoText = {
-  fontSize: "16px",
-  lineHeight: "20px",
-  color: "black",
+  fontSize: "14px",
+  lineHeight: "18px",
+  padding: "8px",
+  margin: 0,
+  color: "#000",
 };
 
 const tableContent = {
