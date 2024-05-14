@@ -13,7 +13,7 @@ const CommitmentSection = () => {
           >
             {"Everycarbuyer, Your Car's Value, Our Expert Deal."}
           </h1>
-          <p style={{ padding: "28px" }} className="text-center">
+          <p style={{ padding: "20px" }} className="text-center">
             <span className="font-bromega text-base font-bold text-black">
               {"Unlocking Your Car's Value: What Sets Us Apart?"}
             </span>
