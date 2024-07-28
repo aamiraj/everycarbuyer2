@@ -1,15 +1,15 @@
-import { HeaderNavBar } from "@/components/HeaderNavBar";
 import BigForm from "@/sections/BigForm";
 import ImportantMessage from "@/sections/ImportantMessage";
-import FooterSection from "@/sections/FooterSection";
 import GoToTopButton from "@/components/GoToTopButton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Details",
+};
 
 const page = () => {
   return (
-    <main className="max-width-1600">
-      <header id="navbar">
-        <HeaderNavBar />
-      </header>
+    <div>
       <section id="detailsForm">
         <div className="custom-shape-divider-bottom">
           <svg
@@ -29,11 +29,8 @@ const page = () => {
       <section id="importantMessage">
         <ImportantMessage />
       </section>
-      <section id="footer">
-        <FooterSection />
-      </section>
       <GoToTopButton />
-    </main>
+    </div>
   );
 };
 

@@ -9,11 +9,11 @@ const CommitmentSection = () => {
         <div className="secondBorderDesign">
           <h1
             style={{ color: "#2591FE", padding: "16px 0px" }}
-            className="font-bold text-4xl text-center font-bromega"
+            className="commitment-text font-bold text-2xl md:text-4xl text-center font-bromega"
           >
             {"Everycarbuyer, Your Car's Value, Our Expert Deal."}
           </h1>
-          <p style={{ padding: "20px" }} className="text-center">
+          <p style={{ padding: "20px" }} className="text-center commitment-text">
             <span className="font-bromega text-base font-bold text-black">
               {"Unlocking Your Car's Value: What Sets Us Apart?"}
             </span>

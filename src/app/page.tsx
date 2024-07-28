@@ -10,10 +10,7 @@ import Testimonials from "@/sections/Testimonials";
 
 export default function Home() {
   return (
-    <main className="max-width-1600">
-      <header id="navbar">
-        <HeaderNavBar />
-      </header>
+    <div>
       <section id="header">
         <HeaderSection />
       </section>
@@ -32,10 +29,8 @@ export default function Home() {
       <section id="offer">
         <OfferSection />
       </section>
-      <section id="footer">
-        <FooterSection />
-      </section>
+
       <GoToTopButton />
-    </main>
+    </div>
   );
 }

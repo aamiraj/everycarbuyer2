@@ -265,10 +265,12 @@ html {
   width: 100%;
   background-color: #333333;
   color: #fff;
-  padding: 96px 128px 0 128px;
+  padding: 40px 16px;
 }
 
 .footerGrid {
+  width: 90%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(5, auto);
   gap: 40px;
@@ -804,12 +806,7 @@ html {
     padding: 20px;
   }
 
-  .secondBorderDesign h1 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-
-  .secondBorderDesign h1, p {
+  .secondBorderDesign .commitment-text {
     transform: translateX(-10px);
   }
 
@@ -826,10 +823,6 @@ html {
 
   .commitmentSection {
     padding: 80px 20px 80px 10px;
-  }
-
-  .footerSection {
-    padding: 40px 16px;
   }
 
   .footerGrid {
@@ -902,7 +895,7 @@ html {
     padding: 1rem;
     background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
-    background-position: 59% 18%;
+    background-position: center;
   }
 
   .markerBG2 {
@@ -941,9 +934,7 @@ html {
   .commitmentSection {
     padding: 80px 20px;
   }
-  .footerSection {
-    padding: 40px 16px;
-  }
+
   .footerGrid {
     grid-template-columns: 100%;
     gap: 16px;
@@ -1014,7 +1005,7 @@ html {
     padding: 1rem;
     background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
-    background-position: 59% 18%;
+    background-position: center;
   }
 
   .markerBG2 {
@@ -1040,9 +1031,6 @@ html {
     padding: 80px 54px;
   }
 
-  .footerSection {
-    padding: 40px 16px;
-  }
   .footerGrid {
     grid-template-columns: 49% 49%;
     gap: 16px;
@@ -1108,7 +1096,7 @@ html {
     padding: 1rem;
     background-image: url(../assets//marker.svg);
     background-repeat: no-repeat;
-    background-position: 59% 18%;
+    background-position: center;
   }
 
   .markerBG2 {
@@ -1135,9 +1123,6 @@ html {
     padding: 80px 108px;
   }
 
-  .footerSection {
-    padding: 80px 16px;
-  }
   .footerGrid {
     grid-template-columns: 49% 49%;
     gap: 16px;

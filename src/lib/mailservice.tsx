@@ -9,6 +9,7 @@ export const sendMail = async (subject: string, user: any, car: any) => {
       user: process.env.NODEMAILER_EMAIL,
       pass: process.env.NODEMAILER_PASS,
     },
+    from: `Everycarbuyer ${process.env.NODEMAILER_EMAIL}`
   });
 
   const mailOptions = {

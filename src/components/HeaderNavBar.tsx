@@ -17,11 +17,11 @@ export function HeaderNavBar() {
             quality={100}
           />
         </Link> */}
-        <Link href={"/"} className="font-bromega font-bold text-4xl text-black">
+        <Link href={"/"} className="font-bromega font-bold text-2xl md:text-4xl text-black">
           every
           <span
             style={{ color: "#2591FE" }}
-            className="font-bromega font-bold text-4xl"
+            className="font-bromega font-bold text-2xl md:text-4xl"
           >
             car
           </span>

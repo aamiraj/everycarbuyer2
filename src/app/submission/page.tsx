@@ -1,17 +1,17 @@
 import React from "react";
-import { HeaderNavBar } from "@/components/HeaderNavBar";
 import SubmissionHeader from "@/sections/SubmissionHeader";
 import HowItWorks from "@/sections/HowItWorks";
-import FooterSection from "@/sections/FooterSection";
 import FinalMessage from "@/sections/FinalMessage";
 import GoToTopButton from "@/components/GoToTopButton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thank You",
+};
 
 const page = () => {
   return (
-    <main className="max-width-1600">
-      <header id="navbar">
-        <HeaderNavBar />
-      </header>
+    <div>
       <section id="submissionHeader">
         <SubmissionHeader />
       </section>
@@ -21,11 +21,8 @@ const page = () => {
       <section id="finalmessage">
         <FinalMessage />
       </section>
-      <section id="footer">
-        <FooterSection />
-      </section>
       <GoToTopButton />
-    </main>
+    </div>
   );
 };
 

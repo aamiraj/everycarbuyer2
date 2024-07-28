@@ -12,9 +12,9 @@ const Heading = ({ content, marked, rest = "" }: HeadingType) => {
   return (
       <h1 style={{
         padding: "40px 0"
-      }} className="font-bold text-4xl text-center font-bromega">
+      }} className="font-bold text-3xl md:text-3xl text-center font-bromega">
         <span>{content}</span>
-        <span className="text-4xl text-center font-bromega markerBG">
+        <span className="text-3xl md:text-3xl text-center font-bromega markerBG">
           {marked}
         </span>
         <span>{rest}</span>

@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
 
   const headerConf: any = {
     "Content-Type": "application/json",
-    "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
+    "x-api-key": process.env.DVLA_API_KEY,
   };
 
   const res = await fetch(url, {
